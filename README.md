@@ -12,7 +12,7 @@ Welcome to my cybersecurity portfolio! This repository showcases my projects, wr
 
 ## 🎯 About Me
 
-I'm Daniel Thrasyvoulou, passionate about cybersecurity and dedicated to building practical skills in incident response, threat detection, and blue team operations. I'm actively learning through hands-on projects and am always looking to expand my knowledge in defensive security.
+I'm Daniel Thrasyvoulou, passionate about cybersecurity and dedicated to building practical skills in incident response, threat detection, and blue team operations. I'm actively learning through hands-on challenges and real-world scenarios.
 
 ## 🚀 What You'll Find Here
 
@@ -32,7 +32,7 @@ This portfolio represents my journey learning cybersecurity through real-world s
 Feel free to reach out to discuss cybersecurity, security tools, or collaboration opportunities!
 
 **Email:** dannythrasyvoulou@gmail.com  
-**GitHub:** [mannic1](https://github.com/mannic1)
+**GitHub:** [Wish-nz](https://github.com/Wish-nz)
 
 ---
 
