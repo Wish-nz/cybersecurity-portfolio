@@ -1,170 +1,173 @@
 # Security Audit — Barton Toys
 
-✅ Portfolio Activity: Conduct a security audit
+![Risk: 8/10](https://img.shields.io/badge/Risk-8%2F10-red) ![PCI DSS](https://img.shields.io/badge/PCI_DSS-Non--Compliant-red) ![GDPR](https://img.shields.io/badge/GDPR-Partial--Compliant-yellow) ![SOC](https://img.shields.io/badge/SOC-Partial--Compliant-yellow)
 
-*This is based on the Google Cybersecurity Certificate required activity (Module 2).* 
+✅ Portfolio Activity: Conduct a security audit — Google Cybersecurity Certificate (Module 2)
+
+---
+
+## Table of Contents
+
+- [Scenario](#scenario)
+- [Scope & Goals](#scope--goals)
+- [Current Assets](#current-assets)
+- [Risk Assessment (Summary)](#risk-assessment-summary)
+- [Control Categories](#control-categories)
+- [Controls Assessment Checklist](#controls-assessment-checklist)
+- [Compliance Checklist](#compliance-checklist)
+- [Priority Recommendations](#priority-recommendations)
+- [Judgement Calls / Notes](#judgement-calls--notes)
+- [Next Steps for IT Manager](#next-steps-for-it-manager)
 
 ---
 
 ## Scenario
 
-Barton Toys is a small U.S. business that develops and sells toys. Their single physical location serves as the main office, storefront, and warehouse. The IT manager has decided to perform an internal IT audit to maintain compliance and support business growth.
+Barton Toys is a small U.S. toy developer and retailer operating from a single site (office, storefront, and warehouse). The IT manager has initiated an internal IT audit to improve compliance and scale business operations securely.
 
-Your task: review the IT manager’s scope, goals, and risk assessment, then complete a controls and compliance checklist and provide prioritized recommendations.
+Your task: review the scope, goals, and risk assessment; complete the controls and compliance checklists; and provide prioritized recommendations.
 
 ---
 
 ## Scope & Goals
 
-- **Scope:** Entire security program at Barton Toys — employee equipment, internal network, systems, software, data retention/storage, and legacy systems.
-- **Goals:** Assess existing assets, evaluate current controls and compliance, and identify improvements to strengthen security posture.
+- Scope: Entire Barton Toys security program — devices, network, systems, software, data, and legacy systems.
+- Goals: Inventory assets, assess current controls and compliance, and identify prioritized improvements to reduce risk.
 
 ---
 
 ## Current Assets
 
-- On-premises equipment (office needs)
-- Employee equipment: desktops, laptops, smartphones, remote workstations, peripherals
-- Storefront products (onsite & online) and adjoining warehouse
-- Systems & services: accounting, telephony, database, security, e-commerce, inventory
-- Internet access and internal network
-- Data retention and storage
-- Legacy systems (end-of-life) requiring human monitoring
+- On-premises infrastructure and office equipment
+- Employee devices (desktops, laptops, smartphones, peripherals)
+- Storefront inventory (onsite & online) and warehouse
+- Business systems: accounting, telephony, database, e-commerce, inventory, security
+- Internet connectivity and internal network
+- Data stores and retention systems
+- Legacy systems requiring manual monitoring
 
 ---
 
 ## Risk Assessment (Summary)
 
-- **Risk score:** 8 / 10 (high) — due to lack of controls and incomplete compliance.
+- Risk score: **8 / 10** — elevated due to missing controls and incomplete compliance.
 
-Key findings:
-- Broad employee access to internal data, including potential access to cardholder data and customer PII/SPII. ⚠️
-- No encryption for locally stored/processed cardholder data. 🔓
-- No enforced least privilege or separation of duties. 🚫
-- Firewall and antivirus present; IDS missing. 🛡️
-- No disaster recovery plan or backups. 🔁
+Key findings (concise):
+- Broad employee access to internal data; cardholder data and PII/SPII exposure possible. ⚠️
+- No encryption for locally processed/stored payment data. 🔓
+- Least privilege and separation of duties not enforced. 🚫
+- Firewall and AV present; no IDS/IPS. 🛡️
+- No disaster recovery plan or tested backups. 🔁
 - Weak password policy and no centralized password manager. 🔑
-- Legacy systems monitored ad-hoc without a schedule. 🕰️
-- Physical security (locks, CCTV, fire detection) is adequate. 🔒📹🔥
+- Legacy systems monitored informally without schedule. 🕰️
+- Physical security (locks, CCTV, fire systems) is adequate. 🔒📹🔥
 
 ---
 
 ## Control Categories
 
-- **Administrative / Managerial:** policies, procedures, roles/responsibilities
-- **Technical:** firewalls, IDS/IPS, encryption, backups, AV, password management
-- **Physical / Operational:** locks, CCTV, badge readers, lighting, signage
+- Administrative/Managerial: policies, roles, access governance
+- Technical: firewall, IDS/IPS, encryption, backups, AV, password management
+- Physical/Operational: locks, CCTV, badge readers, lighting, signage
 
-Control types: Preventative, Corrective, Detective, Deterrent
+Control types: Preventative, Detective, Corrective, Deterrent
 
 ---
 
 ## Controls Assessment Checklist
 
-Use this checklist to indicate whether Barton Toys currently has each control in place. Icons show control status (✅ = present, ❌ = missing).
+Status icons: ✅ = present, ❌ = missing, ⚠️ = partial / needs improvement
 
 | Status | Control | Notes |
 |---:|---|---|
-| ❌ | Least Privilege | Not implemented; all employees can access internal data. |
-| ❌ | Disaster recovery plan | No plan or backups for critical data. |
-| ✅ | Password policies | Policy exists but is weak (nominal requirements). |
+| ❌ | Least Privilege | Not implemented; broad access to internal data. |
+| ❌ | Disaster recovery plan | Absent; no documented DR processes or recovery tests. |
+| ✅ | Password policies | Policy exists but is weak and unenforced technically. |
 | ❌ | Separation of duties | Not implemented. |
-| ✅ | Firewall | Firewall is in place and filtering traffic. |
-| ❌ | Intrusion detection system (IDS) | Not installed — recommend IDS/IPS. |
-| ❌ | Backups | No regular, secure backups in place. |
-| ✅ | Antivirus software | AV is installed and monitored. |
+| ✅ | Firewall | Implemented and filtering traffic. |
+| ❌ | Intrusion detection system (IDS/IPS) | Not installed — detective capability missing. |
+| ❌ | Backups | No regular, protected backups for critical systems. |
+| ✅ | Antivirus (AV) software | Installed and monitored. |
 | ⚠️ | Manual monitoring & maintenance (legacy systems) | Performed ad-hoc; lacks schedule and documentation. |
-| ❌ | Encryption | Cardholder data not encrypted at rest/transit. |
-| ❌ | Password management system | No centralized password manager. |
-| ✅ | Locks (office/store/warehouse) | Physical locks in place. |
-| ✅ | CCTV surveillance | CCTV present and functioning. |
-| ✅ | Fire detection & prevention | Fire alarms/sprinklers present and functioning. |
+| ❌ | Encryption (data at rest/in transit for cardholder data) | Not in use for payment data. |
+| ❌ | Centralized password management system | Not deployed. |
+| ✅ | Locks (office/store/warehouse) | Physical locks present. |
+| ✅ | CCTV surveillance | Present and operational. |
+| ✅ | Fire detection & prevention | Present and operational. |
 
 ---
 
 ## Compliance Checklist
 
-Mark whether Barton Toys currently adheres to each compliance best practice.
-
-### Payment Card Industry Data Security Standard (PCI DSS)
+Payment Card Industry Data Security Standard (PCI DSS)
 
 | Status | Best practice | Notes |
 |---:|---|---|
-| ❌ | Only authorized users have access to customers’ credit card information | Employees may access cardholder data broadly. |
-| ❌ | Cardholder data is processed & stored securely | Data is stored locally without required protections/encryption. |
-| ❌ | Implement data encryption for payment data | Encryption is not in use for cardholder data. |
-| ✅ | Adopt secure password management policies | A password policy exists but is weak; presence noted. |
+| ❌ | Only authorized users have access to cardholder data | Access is not restricted; scope unclear. |
+| ❌ | Cardholder data processed/stored securely | Data stored locally without required protections. |
+| ❌ | Implement encryption for payment data | Missing. |
+| ✅ | Adopt secure password management policies | Policy exists but needs enforcement and stronger controls. |
 
-### General Data Protection Regulation (GDPR)
-
-| Status | Best practice | Notes |
-|---:|---|---|
-| ❌ | E.U. customers’ data is kept private/secured | Data protections are incomplete. |
-| ✅ | 72-hour breach notification plan for E.U. customers | Notification plan exists. |
-| ❌ | Ensure data is properly classified & inventoried | Asset/data inventory not established. |
-| ✅ | Enforce privacy policies & procedures | Privacy processes exist and are enforced. |
-
-### System and Organization Controls (SOC)
+General Data Protection Regulation (GDPR)
 
 | Status | Best practice | Notes |
 |---:|---|---|
-| ✅ | User access policies established | Policies exist but access governance is weak. |
-| ❌ | Sensitive data (PII/SPII) is protected/confidential | Access controls and encryption lacking. |
-| ✅ | Data integrity controls in place | Data integrity is managed. |
-| ✅ | Data availability for authorized users | Availability controls exist, though backups are needed. |
+| ❌ | E.U. customers’ data is kept private/secured | Controls incomplete; encryption/access controls missing. |
+| ✅ | 72-hour breach notification plan | Notification process exists. |
+| ❌ | Data classification & inventory | Not established. |
+| ✅ | Privacy policies & procedures enforced | Processes documented and in use. |
+
+SOC (System and Organization Controls)
+
+| Status | Best practice | Notes |
+|---:|---|---|
+| ✅ | User access policies established | Policies present but governance gaps remain. |
+| ❌ | Sensitive data (PII/SPII) protected/confidential | Technical protections insufficient. |
+| ✅ | Data integrity controls | Integrity controls present. |
+| ✅ | Data availability for authorized users | Availability exists; backups are needed for resilience. |
 
 ---
 
-## Priority Recommendations (Action Plan)
+## Priority Recommendations
 
-1. 🔒 Immediate — Implement least privilege and separation of duties
-   - Restrict access to systems and cardholder/PII data by role.
-   - Enforce access approvals, periodic access reviews, and timely account revocation.
+Structured, prioritized actions with expected impact.
 
-2. 🔐 Immediate — Encrypt payment and sensitive data
-   - Apply encryption at rest and in transit for cardholder data and PII.
-   - Implement robust key management and limit access to cryptographic keys.
+Immediate (0–30 days)
+- Implement least privilege and separation of duties: restrict access by role, enforce approvals, and schedule access reviews. 🔒
+- Encrypt payment and sensitive data at rest and in transit; apply strong key management. 🔐
+- Strengthen password policy and enable MFA for privileged accounts. 🔑
 
-3. ♻️ Short Term — Backups & Disaster Recovery
-   - Implement secure, regular backups (offsite or cloud) and a tested DR plan.
-   - Define RTO/RPO and test recovery procedures regularly.
+Short term (30–90 days)
+- Deploy regular, secure backups and define/test a disaster recovery plan (define RTO/RPO). ♻️
+- Install IDS/IPS and centralize logs into a SIEM or logging solution with alerting and response playbooks. 🛡️
+- Deploy a centralized password management system for shared/service accounts. 🧰
 
-4. 🛡️ Short Term — IDS/IPS and monitoring
-   - Deploy IDS/IPS and integrate logs into centralized monitoring (SIEM).
-   - Create alerting and incident response playbooks.
+Medium term (90–180 days)
+- Inventory and classify assets and data; map critical assets to business impact. 📋
+- Formalize legacy system maintenance schedules and intervention procedures. 🧭
 
-5. 🔑 Short Term — Strengthen passwords & deploy password manager
-   - Increase password complexity and length; enable MFA for privileged accounts.
-   - Deploy centralized password manager for shared/service accounts.
-
-6. 📋 Medium Term — Asset & data classification
-   - Inventory hardware, software, and datasets; classify by sensitivity and business impact.
-
-7. 🧰 Medium Term — Formalize legacy system processes
-   - Document maintenance schedules and intervention procedures for legacy systems.
-
-8. ✅ Ongoing — Compliance mapping & audits
-   - Map controls to PCI DSS, GDPR, and SOC; schedule regular internal/external audits.
+Ongoing
+- Map controls to PCI DSS, GDPR, and SOC; schedule regular internal and external audits. ✅
 
 ---
 
 ## Judgement Calls / Notes
 
-- Password policy exists but is insufficient — treat as partial control.
-- Manual legacy-system monitoring occurs but lacks formal schedule/documentation.
-- User access policies are present, but missing least privilege & separation of duties reduce effectiveness.
-- Privacy/breach notification processes exist (GDPR), but missing protections (encryption, access controls) increase risk.
+- Password policy marked present but considered partial — technically unenforced and weak.
+- Manual legacy-system monitoring exists but lacks documented frequency or response criteria.
+- User access policies exist but are ineffective without least privilege and separation of duties.
+- GDPR breach notification process exists but protective controls (encryption, access restrictions) are incomplete.
 
 ---
 
 ## Next Steps for IT Manager
 
-1. Approve immediate access restriction and encryption projects. ⚠️
-2. Procure and deploy a backup solution and schedule disaster recovery tests. 🔁
-3. Plan IDS/IPS and centralized logging with alerting and response. 🛡️
-4. Update password policy, enable MFA, and deploy a password manager. 🔑
-5. Start an asset & data inventory initiative to support NIST CSF Identify. 📋
+1. Approve projects for access restrictions and payment-data encryption. ⚠️
+2. Procure a backup solution and schedule DR tabletop and recovery tests. 🔁
+3. Plan IDS/IPS + centralized logging and a SIEM pilot and define incident playbooks. 🛡️
+4. Update password standards, enable MFA, and deploy a password manager. 🔑
+5. Start asset & data inventory to support the NIST CSF Identify function. 📋
 
 ---
 
-*Prepared as a reformatted, professional audit checklist and recommendations for Barton Toys.*
+*Prepared and tightened for clarity, with GitHub-style badges, a Table of Contents, and static status indicators.*
