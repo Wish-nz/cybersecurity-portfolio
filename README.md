@@ -9,10 +9,11 @@ Welcome to my cybersecurity portfolio! This repository showcases my projects, wr
 - **[Malware-Analysis/](./Malware-Analysis/)** - My malware analysis reports and findings
 - **[Lab-Documentation/](./Lab-Documentation/)** - Documentation of my home lab setups
 - **[Bug-Bounty-Reports/](./Bug-Bounty-Reports/)** - Vulnerability findings and bug bounty reports
+- **[Basic-Playbooks/](./Basic-Playbooks/)** - Incident response playbooks and security response guidance
 
 ## 🎯 About Me
 
-I'm Daniel Thrasyvoulou, passionate about cybersecurity and dedicated to building practical skills in incident response, threat detection, and blue team operations. I'm actively learning through hands-on challenges and real-world scenarios.
+I'm Daniel Thrasyvoulou, passionate about cybersecurity and dedicated to building practical skills in incident response, threat detection, and blue team operations. I'm actively learning through hands-on labs, CTF competitions, and security research projects.
 
 ## 🚀 What You'll Find Here
 
@@ -36,4 +37,4 @@ Feel free to reach out to discuss cybersecurity, security tools, or collaboratio
 
 ---
 
-*Last updated: 2026-06-30*
+*Last updated: 2026-07-06*
