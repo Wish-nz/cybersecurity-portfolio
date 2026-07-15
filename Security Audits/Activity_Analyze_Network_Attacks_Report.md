@@ -79,3 +79,7 @@ Based on a thorough analysis of the network logs, the traffic indicates a classi
 - **Enable TCP SYN Cookies**: This allows the server to handle incoming [SYN] requests without allocating resources in the connection backlog queue until the client completes the handshake with a valid [ACK].
 - **Implement Rate Limiting and IP Blocking**: Configure a firewall or Intrusion Prevention System (IPS) to detect rapid, repetitive [SYN] requests from a single source (like 203.0.113.0) and temporarily block or rate-limit that IP.
 - **Reduce TCP Connection Timeout**: Decrease the timeout duration for half-open connections so that the server frees up backlog queue slots more quickly when a client fails to complete the handshake.
+
+- [Cybersecurity-incident-report.docx](https://github.com/user-attachments/files/30036072/Cybersecurity-incident-report.docx)
+[Wireshark-log.xlsx](https://github.com/user-attachments/files/30036069/Wireshark-log.xlsx)
+
