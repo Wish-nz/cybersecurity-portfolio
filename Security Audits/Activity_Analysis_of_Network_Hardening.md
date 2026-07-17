@@ -48,7 +48,7 @@ If no action is taken to address these vulnerabilities, the organization is at r
 
 ## Part 1: Selected Hardening Tools and Methods
 
-Based on analysis of the identified vulnerabilities and organizational risk profile, the following three hardening tools and methods are recommended as the highest priority implementations:
+Based on analysis of the identified vulnerabilities and organizational risk profile, the following three hardening tools and methods are the ones I recommended as the highest priority implementations:
 
 1. **Multifactor Authentication (MFA)**
 2. **Patch Updates**
