@@ -9,9 +9,6 @@ Ai formating Guidelines:
 
 ---
 
-## Quick summaries (written for recruiters / non-specialists)
-
-Below is a short, easy-to-scan summary of each item in this folder with a link to the file. Each blurb explains what the document is, the main outcome, and the key skills demonstrated — written so someone without a security background can understand the value.
 
 ### Google Cybersecurity Certificate — coursework & portfolio activities
 (Items here were created as part of the Google Cybersecurity Certificate. Labels show whether the item is a short module activity or a fuller lab/audit.)
