@@ -1,579 +1,710 @@
-Connect and Protect: Module 1
-Networks and Network Security
+# Connect and Protect: Networks and Network Security Course 3
 
-What is a Network?
+## Quick Navigation
+- [Connect and Protect: Module 1](#connect-and-protect-module-1)
+- [Networks and Network Security](#networks-and-network-security)
+- [What is a Network?](#what-is-a-network)
+- [The Importance of Network Security](#the-importance-of-network-security)
+- [Network Devices and Their Functions](#network-devices-and-their-functions)
+- [Cloud Computing vs. Traditional Networks](#cloud-computing-vs-traditional-networks)
+- [Network communication](#network-communication)
+- [Local and wide network communication](#local-and-wide-network-communication)
+- [Connect and Protect: Module 2](#connect-and-protect-module-2)
+- [Network protocols](#network-protocols)
+- [Common network protocols](#common-network-protocols)
+- [Additional network protocols](#additional-network-protocols)
+- [Wireless protocols](#wireless-protocols)
+- [System identification](#system-identification)
+- [Firewalls and network security measures](#firewalls-and-network-security-measures)
+- [Virtual private networks (VPNs)](#virtual-private-networks-vpns)
+- [Security zones](#security-zones)
+- [Subnetting and CIDR](#subnetting-and-cidr)
+- [Proxy servers](#proxy-servers)
+- [Virtual networks and privacy](#virtual-networks-and-privacy)
+- [Connect and Protect: Module 3](#connect-and-protect-module-3)
+- [Secure against network intrusions](#secure-against-network-intrusions)
+- [Secure networks against Denial of Service (DoS) attacks](#secure-networks-against-denial-of-service-dos-attacks)
+- [Network attack tactics and defense](#network-attack-tactics-and-defense)
+- [Connect and Protect: Module 4](#connect-and-protect-module-4)
+- [Introduction to security hardening](#introduction-to-security-hardening)
+- [OS hardening](#os-hardening)
+- [Network hardening](#network-hardening)
+- [Network security applications](#network-security-applications)
+- [Network security in the cloud](#network-security-in-the-cloud)
+- [Skills obtained in this course](#skills-obtained-in-this-course)
+
+---
+
+## Connect and Protect: Module 1
+
+## Networks and Network Security
+
+### What is a Network?
 •	A network is a collection of connected devices, such as laptops, cell phones, smart appliances in a home, or workstations, printers, and servers in an office.
 •	Devices on a network can communicate using either network cables or wireless connections.
-Device Communication and Addressing
+
+### Device Communication and Addressing
 •	For devices to communicate, they need to locate each other using unique identifiers called IP addresses and MAC addresses.
 •	These addresses ensure that communications are directed to the correct device on the network.
-Types of Networks
+
+### Types of Networks
 •	Local Area Network (LAN): Spans a small geographical area like a home, office, or school. An example is your phone connecting to your home Wi-Fi.
 •	Wide Area Network (WAN): Covers a large geographical area, such as a city, state, or even an entire country. The internet is a prime example of a WAN.
 
-
-The Importance of Network Security
+## The Importance of Network Security
 •	Network security is crucial for ensuring network systems are safe and resilient against malicious hackers.
 •	It also plays a vital role in protecting user data from potential threats.
-A Day in the Life of a Network Security Engineer
+
+### A Day in the Life of a Network Security Engineer
 •	Tina's work involves a significant amount of coding and design.
 •	She collaborates with security and network teams to address their priorities and blockers, developing solutions for their needs.
-Advice for Aspiring Cybersecurity Professionals
+
+### Advice for Aspiring Cybersecurity Professionals
 •	Continuous learning and curiosity are essential in the ever-evolving field of cybersecurity.
 •	Cybersecurity is a team sport, emphasizing collaboration and brainstorming to solve complex problems.
 
-The Role of an Offensive Security Engineer
+### The Role of an Offensive Security Engineer
 •	A offensive Security Engineers job involves simulating adversaries and threats to Google's infrastructure to identify vulnerabilities.
 •	He "hacks Google" to make it more secure, focusing on defending against potential attacks.
-Key Technical Skills
+
+### Key Technical Skills
 •	Programming and Platform Security: A strong understanding of how computers work, including their underlying components and infrastructure, is crucial.
-•	Entry-Level Cybersecurity Analyst Skills: This includes using command lines for operating system interaction, log parsing for debugging, and network traffic analysis to ensure network functionality and security.
-The Importance of Communication
+•	Entry-Level Cybersecurity Analyst Skills: This includes using command lines for operating system interaction, log parsing for debugging, and network traffic analysis to ensure network function[...]
+
+### The Importance of Communication
 •	Effective communication is vital for conveying identified issues to product teams and engineers.
 •	The ability to explain technical problems with a business-oriented approach ensures that vulnerabilities are not only identified but also resolved.
 
+## Network Devices and Their Functions
 
-Network Devices and Their Functions
+### Network Devices and Their Functions
 •	Hubs broadcast information to every device on a network, similar to a radio tower.
 •	Switches create connections between specific devices, sending and receiving data only to the intended destination, making them more secure and efficient than hubs.
-Routers and Modems
+
+### Routers and Modems
 •	Routers connect multiple networks, directing information between them. For example, a router forwards data from a computer on one network to a tablet on another.
 •	Modems connect your router to the internet, enabling internet access for the local area network (LAN). They facilitate data transfer between your network and the internet.
-Virtualization Tools
+
+### Virtualization Tools
 •	Many functions of physical network devices like hubs, switches, routers, and modems can be performed by virtualization tools.
 •	These software-based tools, often offered by cloud service providers, provide cost savings and scalability for network operations.
 
-Network Devices and Connections
+### Network Devices and Connections
 •	Network devices, such as routers and switches, manage data flow and connect users to the network.
 •	Devices like computers and phones connect to the network via these specialized network devices, using wired or wireless connections to send and receive data packets.
-Key Network Components
+
+### Key Network Components
 •	Firewalls act as a first line of defense, monitoring and restricting network traffic based on configured security rules.
 •	Servers provide information and services to client devices, operating on a client-server model where clients request and servers fulfill those requests.
-Traffic Management Devices
+
+### Traffic Management Devices
 •	Switches are preferred over hubs for directing local network traffic, as they intelligently forward data packets to their intended destination, improving performance and security.
 •	Routers connect different networks and direct traffic based on IP addresses, facilitating communication between devices on separate networks and often including firewall features.
 
+## Cloud Computing vs. Traditional Networks
 
-
-Cloud Computing vs. Traditional Networks
+### Cloud Computing vs. Traditional Networks
 •	Cloud Computing: Utilizes remote servers, applications, and network services hosted on the internet, allowing companies to save money and access more network resources.
 •	Traditional Networks: Companies traditionally owned and housed their network devices in their own office buildings.
-Benefits of Cloud Networks
+
+### Benefits of Cloud Networks
 •	Cost Savings: Companies can reduce costs by not needing to store devices or manage the network themselves.
 •	Accessibility: Remote servers enable online services and web applications to be used from any geographic location.
-The Rise of Cloud Security
+
+### The Rise of Cloud Security
 •	Increasing Relevance: As more organizations migrate to cloud services, cloud security is becoming a significant aspect of network security.
 •	Focus on Identity-Based Security: Security professionals now need to verify both the origin of traffic and the identity associated with it.
 
-Cloud Computing and On-Premise Networks
+### Cloud Computing and On-Premise Networks
 •	On-premise networks involve all network devices being physically located at a company's site.
 •	Cloud computing utilizes remote servers, applications, and network services hosted on the internet by Cloud Service Providers (CSPs).
-Cloud Service Models and Environments
+
+### Cloud Service Models and Environments
 •	CSPs offer services like Software as a Service (SaaS), Infrastructure as a Service (IaaS), and Platform as a Service (PaaS).
 •	Hybrid cloud environments combine CSP services with an organization's on-premise resources, while multi-cloud environments use multiple CSPs.
-Benefits of Cloud Computing and Software-Defined Networks
+
+### Benefits of Cloud Computing and Software-Defined Networks
 •	Reliability in cloud computing ensures consistent access to resources with minimal interruption.
 •	Decreased cost is achieved as CSPs offer virtual devices and services at a fraction of the cost of maintaining on-premise infrastructure.
 •	Increased scalability allows companies to easily adjust their service consumption based on changing business needs, paying only for what they use.
 
-Cloud Computing and On-Premise Networks
+## Network communication
 
-On-premise networks involve all network devices being physically located at a company's site.
-Cloud computing utilizes remote servers, applications, and network services hosted on the internet by Cloud Service Providers (CSPs).
-Cloud Service Models and Environments
-
-CSPs offer services like Software as a Service (SaaS), Infrastructure as a Service (IaaS), and Platform as a Service (PaaS).
-Hybrid cloud environments combine CSP services with an organization's on-premise resources, while multi-cloud environments use multiple CSPs.
-Benefits of Cloud Computing and Software-Defined Networks
-
-Reliability in cloud computing ensures consistent access to resources with minimal interruption.
-Decreased cost is achieved as CSPs offer virtual devices and services at a fraction of the cost of maintaining on-premise infrastructure.
-Increased scalability allows companies to easily adjust their service consumption based on changing business needs, paying only for what they use.
-
-
-
-
-
-
-
-Network communication
-
-Data Packets: The Basics of Network Communication
+### Data Packets: The Basics of Network Communication
 •	Data packets are the fundamental units of information transferred across a network, containing details about their destination, origin, and content.
 •	Similar to a physical letter, a data packet includes a header with IP and MAC addresses, a protocol number, the message body, and a footer to signal its completion.
-Network Performance and Security
+
+### Network Performance and Security
 •	Network performance can be assessed by bandwidth, which measures the amount of data received per second, calculated by dividing data quantity by time.
 •	Security personnel monitor bandwidth and speed for irregularities, as these can be indicators of a network attack, and packet sniffing is used to inspect data packets for security purposes.
 
-
-TCP (Transmission Control Protocol)
+### TCP (Transmission Control Protocol)
 •	TCP is an internet communication protocol that enables two devices to establish a connection and stream data.
 •	It organizes data for network transmission, establishes connections, and ensures data packets reach their intended destinations.
-IP (Internet Protocol)
+
+### IP (Internet Protocol)
 •	IP provides standards for routing and addressing data packets as they move between devices on a network.
 •	An IP address acts as a unique identifier for each private network.
-Port Numbers
+
+### Port Numbers
 •	Ports are software-based locations within a network device's operating system that organize data sending and receiving.
 •	Port numbers allow computers to segment network traffic, prioritize operations, and instruct receiving devices on how to handle information.
 
-Layers of the TCP/IP Model
+### Layers of the TCP/IP Model
 •	Network Access Layer: This first layer handles the creation of data packets and their transmission, involving hardware devices like cables and switches.
 •	Internet Layer: The second layer attaches IP addresses to data packets, indicating sender and receiver locations, and determines how networks connect.
-Data Flow and Interaction
+
+### Data Flow and Interaction
 •	Transport Layer: This layer includes protocols that control network traffic flow, manage error control, and ensure smooth data transmission.
 •	Application Layer: The final layer defines how data packets interact with receiving devices, organizing functions such as file transfers and email services.
 
-TCP/IP Model Overview
+### TCP/IP Model Overview
 •	The TCP/IP model is a framework for visualizing how data is organized and transmitted across a network, crucial for network engineers and security analysts to identify disruptions or threats.
 •	It consists of four layers: network access, internet, transport, and application, which help security professionals analyze the impact of attacks based on involved processes.
-Layers of the TCP/IP Model
-•	Network Access Layer: This layer handles the creation and transmission of data packets across a network, involving physical hardware like hubs and cables, and protocols such as ARP for mapping IP to MAC addresses.
-•	Internet Layer: Responsible for delivering data to the destination host, potentially on a different network, by attaching IP addresses to data packets and determining the appropriate delivery protocol (e.g., IP and ICMP).
-•	Transport Layer: Manages data delivery between systems or networks, controlling traffic flow with protocols like TCP for reliable, connection-oriented data streaming and UDP for connectionless, performance-sensitive applications.
-•	Application Layer: Similar to the application, presentation, and session layers of the OSI model, this layer defines accessible internet services and applications, using protocols like HTTP, SMTP, and DNS to govern data packet interaction with receiving devices.
-TCP/IP Model versus OSI Model
-•	Both the TCP/IP and OSI models are conceptual frameworks that standardize networking and divide communication into layers, helping professionals visualize network processes and troubleshoot issues.
+
+### Layers of the TCP/IP Model
+•	Network Access Layer: This layer handles the creation and transmission of data packets across a network, involving physical hardware like hubs and cables, and protocols such as ARP for mappin[...]
+•	Internet Layer: Responsible for delivering data to the destination host, potentially on a different network, by attaching IP addresses to data packets and determining the appropriate delivery[...]
+•	Transport Layer: Manages data delivery between systems or networks, controlling traffic flow with protocols like TCP for reliable, connection-oriented data streaming and UDP for connectionles[...]
+•	Application Layer: Similar to the application, presentation, and session layers of the OSI model, this layer defines accessible internet services and applications, using protocols like HTTP, [...]
+
+### TCP/IP Model versus OSI Model
+•	Both the TCP/IP and OSI models are conceptual frameworks that standardize networking and divide communication into layers, helping professionals visualize network processes and troubleshoot i[...]
 •	The TCP/IP model is a simplified version of the OSI model, with the TCP/IP model having four layers compared to the OSI model's seven.
 
-TCP/IP Model vs. OSI Model
+### TCP/IP Model vs. OSI Model
 •	The TCP/IP model is a four-layer framework that helps professionals visualize data organization and transmission, aiding in identifying disruptions or security threats.
 •	The OSI model is a standardized, seven-layer concept describing how computers communicate and send data, used by network and security professionals to discuss problems or threats.
-The Seven Layers of the OSI Model
-•	Application Layer (Layer 7): This layer directly involves the end-user and includes protocols that allow software applications to connect to the internet, such as HTTP/HTTPS for web browsing, SMTP for email, and DNS for translating domain names to IP addresses.
-•	Presentation Layer (Layer 6): Functions at this layer include data translation, encryption, and compression, ensuring data is in a format understandable by applications on both sending and receiving systems.
-•	Session Layer (Layer 5): This layer establishes, maintains, and terminates connections (sessions) between two devices, handling authentication, reconnection, and setting checkpoints during data transfer.
-•	Transport Layer (Layer 4): Responsible for delivering data between devices, this layer manages data transfer speed, flow, and segmentation of data into smaller pieces for easier transmission, using protocols like TCP and UDP.
+
+### The Seven Layers of the OSI Model
+•	Application Layer (Layer 7): This layer directly involves the end-user and includes protocols that allow software applications to connect to the internet, such as HTTP/HTTPS for web browsing,[...]
+•	Presentation Layer (Layer 6): Functions at this layer include data translation, encryption, and compression, ensuring data is in a format understandable by applications on both sending and re[...]
+•	Session Layer (Layer 5): This layer establishes, maintains, and terminates connections (sessions) between two devices, handling authentication, reconnection, and setting checkpoints during da[...]
+•	Transport Layer (Layer 4): Responsible for delivering data between devices, this layer manages data transfer speed, flow, and segmentation of data into smaller pieces for easier transmission,[...]
 •	Network Layer (Layer 3): This layer oversees the routing of data packets between different networks, using IP addresses to deliver them to their intended destinations.
-•	Data Link Layer (Layer 2): This layer organizes the sending and receiving of data packets within a single network, involving devices like switches and network interface cards, and protocols such as NCP, HDLC, and SDLC.
-•	Physical Layer (Layer 1): This is the hardware layer, encompassing physical components like hubs, modems, cables, and wiring, responsible for translating data packets into a stream of 0s and 1s for physical transmission.
+•	Data Link Layer (Layer 2): This layer organizes the sending and receiving of data packets within a single network, involving devices like switches and network interface cards, and protocols s[...]
+•	Physical Layer (Layer 1): This is the hardware layer, encompassing physical components like hubs, modems, cables, and wiring, responsible for translating data packets into a stream of 0s and [...]
 
-Local and wide network communication
+## Local and wide network communication
 
-IP Addresses: Identification and Types
+### IP Addresses: Identification and Types
 •	An IP address is a unique string of characters that identifies a device's location on the internet, similar to a mailing address for a house.
-•	There are two main types: IPv4, which uses four sets of 1-3 digit numbers separated by decimals, and IPv6, which uses 32 characters to accommodate the increasing number of internet-connected devices.
-Public vs. Private IP Addresses
+•	There are two main types: IPv4, which uses four sets of 1-3 digit numbers separated by decimals, and IPv6, which uses 32 characters to accommodate the increasing number of internet-connected [...]
+
+### Public vs. Private IP Addresses
 •	Public IP addresses are assigned by your internet service provider and are connected to your geographic location, with all devices on a network sharing the same public-facing IP.
 •	Private IP addresses are used for communication between devices on the same local network and are not visible to the wider internet.
-MAC Addresses: Device-Specific Identifiers
+
+### MAC Addresses: Device-Specific Identifiers
 •	A MAC address is a unique alphanumeric identifier assigned to each physical device on a network.
 •	Switches use MAC addresses and a MAC address table to direct data packets to the correct device on a network.
 
-Network Layer Operations
+### Network Layer Operations
 •	The network layer handles the addressing and delivery of data packets, directing them from a source to a destination device across the internet.
 •	Routers use the destination IP address within a packet's header to route it, storing this information in routing tables for future use.
-IPv4 Packet Format
+
+### IPv4 Packet Format
 •	An IPv4 packet consists of a header (20 to 60 bytes) and a data section, with the header containing crucial routing information like source and destination IP addresses.
 •	Key fields in the IPv4 header include "Time to Live" (TTL) to prevent indefinite forwarding, "Protocol" to specify the data's protocol, and "Header Checksum" for corruption detection.
-IPv4 vs. IPv6
-•	IPv4 addresses are 4 bytes long, allowing for approximately 4.3 billion unique addresses, while IPv6 addresses are 16 bytes long, supporting a significantly larger number of addresses (340 undecillion).
+
+### IPv4 vs. IPv6
+•	IPv4 addresses are 4 bytes long, allowing for approximately 4.3 billion unique addresses, while IPv6 addresses are 16 bytes long, supporting a significantly larger number of addresses (340 un[...]
 •	IPv6 was developed to address IPv4 address exhaustion and offers a simpler header format, more efficient routing, and improved security features compared to IPv4.
 
-Connect and Protect: Module 2
+## Connect and Protect: Module 2
 
-Network protocols
-The Role of Network Protocols
+## Network protocols
+
+### The Role of Network Protocols
 •	Network protocols are sets of rules that govern how devices on a network communicate, ensuring data is delivered in the correct order and structure.
 •	They are essential for the proper functioning of networks, from accessing websites to transferring data.
-Key Network Protocols in Action
+
+### Key Network Protocols in Action
 •	TCP (Transmission Control Protocol): Establishes a connection and verifies devices before data streaming, often through a "handshake" process.
 •	ARP (Address Resolution Protocol): Determines the MAC address of the next router or device to ensure data packets are sent to the correct location.
 •	HTTPS (Hypertext Transfer Protocol Secure): Provides a secure method for communication between client and web servers, encrypting data using SSL/TLS.
 •	DNS (Domain Name System): Translates human-readable internet domain names into numerical IP addresses, allowing devices to locate websites.
-Protocols and Security
+
+### Protocols and Security
 •	Secure protocols like HTTPS are crucial for protecting sensitive information from malicious actors by encrypting data during transmission.
 •	Understanding network protocols is a fundamental skill for security analysts, as they are integral to daily activities and securing networks.
 
-Common network protocols
-Overview of Network Protocols
+## Common network protocols
+
+### Overview of Network Protocols
 •	A network protocol is a set of rules that govern how devices communicate and exchange data over a network.
 •	Protocols are crucial for network communication, but security analysts must understand their vulnerabilities, as malicious actors can exploit them.
-Categories of Network Protocols
+
+### Categories of Network Protocols
 •	Network protocols are broadly categorized into communication protocols, management protocols, and security protocols.
 •	While there are many protocols, entry-level security analysts should focus on understanding the key ones discussed in this reading.
-Specific Protocol Examples
-•	Communication Protocols: Examples include TCP (reliable, connection-oriented), UDP (fast, connectionless), HTTP (insecure web communication), and DNS (translates domain names to IP addresses).
+
+### Specific Protocol Examples
+•	Communication Protocols: Examples include TCP (reliable, connection-oriented), UDP (fast, connectionless), HTTP (insecure web communication), and DNS (translates domain names to IP addresses)[...]
 •	Management Protocols: SNMP (monitors and manages network devices) and ICMP (reports data transmission errors) are key examples.
 •	Security Protocols: HTTPS (secure web communication using SSL/TLS encryption) and SFTP (secure file transfer using SSH) are vital for data security.
 
-Additional network protocols
-Network Address Translation (NAT)
+## Additional network protocols
+
+### Network Address Translation (NAT)
 •	Function: NAT allows multiple devices on a private network to share a single public IP address when accessing the internet.
 •	Mechanism: Routers replace private IP addresses with a public IP for outgoing traffic and reverse this process for incoming responses.
-Dynamic Host Configuration Protocol (DHCP)
+
+### Dynamic Host Configuration Protocol (DHCP)
 •	Purpose: DHCP is a management protocol that automatically assigns unique IP addresses to devices on a network.
 •	Operation: It works with the router to provide devices with necessary network configuration details, including IP addresses, DNS server addresses, and default gateways.
-Address Resolution Protocol (ARP)
+
+### Address Resolution Protocol (ARP)
 •	Role: ARP translates IP addresses into MAC addresses, which are unique hardware identifiers for network interface cards.
 •	Process: Devices use ARP to discover the MAC address corresponding to a known IP address within the same local network.
-Remote Access Protocols
+
+### Remote Access Protocols
 •	Telnet: An application layer protocol for remote system connections, but it sends information in clear text, making it insecure.
 •	Secure Shell (SSH): A more secure alternative to Telnet, SSH provides encrypted communication and secure authentication for remote access.
-Email Protocols
+
+### Email Protocols
 •	Post Office Protocol (POP): Used to retrieve emails from a mail server, typically downloading them to a local device and optionally deleting them from the server.
 •	Internet Message Access Protocol (IMAP): Allows users to access and manage emails directly on the mail server, enabling synchronization across multiple devices.
 •	Simple Mail Transfer Protocol (SMTP): Responsible for sending and routing emails from the sender to the recipient's mail server.
-Port Numbers and Security
+
+### Port Numbers and Security
 •	Significance: Port numbers help network devices direct data packets to the correct applications or services.
 •	Firewall Application: Firewalls can be configured to filter network traffic based on port numbers, enhancing security by blocking unwanted access.
 
-Protocols and their associated port numbers
+### Protocols and their associated port numbers
 •	DHCP:
-o	UDP port 67 (servers)
-o	UDP port 68 (clients)
+  - UDP port 67 (servers)
+  - UDP port 68 (clients)
 •	ARP: None (it's a Layer 2 protocol)
 •	Telnet: TCP port 23
 •	SSH: TCP port 22
 •	POP3:
-o	TCP/UDP port 110 (unencrypted)
-o	TCP/UDP port 995 (encrypted, SSL/TLS)
+  - TCP/UDP port 110 (unencrypted)
+  - TCP/UDP port 995 (encrypted, SSL/TLS)
 •	IMAP:
-o	TCP port 143 (unencrypted)
-o	TCP port 993 (encrypted, SSL/TLS)
+  - TCP port 143 (unencrypted)
+  - TCP port 993 (encrypted, SSL/TLS)
 •	SMTP:
-o	TCP/UDP Port 25 (unencrypted)
-o	TCP/UDP port 587 (encrypted, TLS)
+  - TCP/UDP Port 25 (unencrypted)
+  - TCP/UDP port 587 (encrypted, TLS)
 •	HTTP: Port 80
 •	DNS: UDP port 53 (can switch to TCP for large replies)
 •	HTTPS: Uses encryption from SSL/TLS (typically port 443, though not explicitly stated in this reading for HTTPS itself, it's implied by the use of SSL/TLS)
 
-Wireless protocols
-IEEE 802.11: The Foundation of Wi-Fi
+## Wireless protocols
+
+### IEEE 802.11: The Foundation of Wi-Fi
 •	IEEE 802.11 is a set of standards that define communications for wireless Local Area Networks (LANs).
 •	The Institute of Electrical and Electronics Engineers (IEEE) is the organization responsible for maintaining these Wi-Fi standards.
-Evolution of Wi-Fi Security
+
+### Evolution of Wi-Fi Security
 •	Wi-Fi protocols have continuously evolved to enhance security and reliability, aiming to match the security levels of wired connections.
 •	Wi-Fi Protected Access (WPA) was introduced in 2004 as a wireless security protocol, with subsequent versions like WPA2 and WPA3 offering advanced encryption and improved security.
-Importance for Security Analysts
+
+### Importance for Security Analysts
 •	As a security analyst, understanding these protocols is crucial for ensuring the security of wireless connections within an organization.
 •	The continuous development of Wi-Fi security measures highlights the ongoing need for vigilance and adaptation in network security.
 
-The evolution of wireless security protocols
-Early Wireless Communication and Wi-Fi
+### The evolution of wireless security protocols
+•	Early Wireless Communication and Wi-Fi
 •	The internet initially relied on physical cables, with wireless expansion occurring after the mid-1980s with designated radio wave frequencies.
 •	Wi-Fi, a marketing term by the Wi-Fi Alliance, refers to a set of standards (IEEE 802.11) for wireless LAN communication.
-Evolution of Wireless Security Protocols
+
+### Evolution of Wireless Security Protocols
 •	WEP (Wired Equivalent Privacy): Developed in 1999, WEP aimed to provide wired-level privacy but is now considered high-risk due to vulnerabilities.
 •	WPA (Wi-Fi Protected Access): Introduced in 2003 as a transitional measure, WPA improved upon WEP by using TKIP and larger encryption keys, but still had vulnerabilities like KRACK attacks.
-Advanced Wireless Security: WPA2 and WPA3
+
+### Advanced Wireless Security: WPA2 and WPA3
 •	WPA2: Released in 2004, WPA2 uses AES and CCMP for stronger encryption and is the current security standard, though it remains vulnerable to KRACK attacks.
-•	WPA3: The latest protocol, WPA3, addresses KRACK attack vulnerabilities with Simultaneous Authentication of Equals (SAE) and offers increased encryption (128-bit, with optional 192-bit for Enterprise mode).
+•	WPA3: The latest protocol, WPA3, addresses KRACK attack vulnerabilities with Simultaneous Authentication of Equals (SAE) and offers increased encryption (128-bit, with optional 192-bit for En[...]
 
-System identification
-Firewalls and network security measures
+## System identification
 
+## Firewalls and network security measures
 
 This video explains different types of firewalls, their operations, and how they enhance network security.
-Types of Firewalls
+
+### Types of Firewalls
 •	Hardware Firewalls: These are physical devices that inspect data packets before they enter the network, offering a basic defense against threats.
 •	Software Firewalls: These are programs installed on computers or servers that perform the same functions as hardware firewalls but are more cost-effective and flexible.
 •	Cloud-based Firewalls (FaaS): Offered by cloud service providers, these software firewalls protect an organization's network and cloud assets by filtering incoming traffic.
-Firewall Operations
+
+### Firewall Operations
 •	Stateless Firewalls: These firewalls operate based on predefined rules and do not track information from data packets, making them less secure.
 •	Stateful Firewalls: These firewalls monitor traffic, analyze network behavior, and proactively filter out suspicious threats by keeping track of information.
-•	Next-Generation Firewalls (NGFW): NGFWs provide advanced security features like deep packet inspection and intrusion protection, often integrating with cloud-based threat intelligence for updated protection.
+•	Next-Generation Firewalls (NGFW): NGFWs provide advanced security features like deep packet inspection and intrusion protection, often integrating with cloud-based threat intelligence for upd[...]
 
-Virtual private networks (VPNs)
-
+## Virtual private networks (VPNs)
 
 This video explains how Virtual Private Networks (VPNs) enhance network security by protecting your online privacy and data.
-The Need for VPNs
+
+### The Need for VPNs
 •	When you connect to the internet, your Internet Service Provider (ISP) handles your requests, but this traffic contains private information like your IP address and location.
 •	This private information is vulnerable to interception, potentially exposing sensitive data such as bank account details.
-How VPNs Work
+
+### How VPNs Work
 •	A VPN changes your public IP address and hides your virtual location, ensuring data privacy when using public networks.
 •	VPNs encrypt your data as it travels across the internet, maintaining confidentiality.
-Encapsulation and Secure Tunnels
-•	VPN services use encapsulation, wrapping sensitive data in other data packets that routers can read, allowing your requests to reach their destination while keeping your personal data encrypted.
+
+### Encapsulation and Secure Tunnels
+•	VPN services use encapsulation, wrapping sensitive data in other data packets that routers can read, allowing your requests to reach their destination while keeping your personal data encrypt[...]
 •	VPNs create an encrypted tunnel between your device and the VPN server, making your data unhackable without a cryptographic key.
 
-Security zones
-Understanding Security Zones
+## Security zones
+
+### Understanding Security Zones
 •	Security zones segment a network, giving each segment specific access permissions and security rules.
 •	They act as a barrier to internal networks, maintain privacy, and prevent issues from spreading across the entire network.
-Types of Security Zones
+
+### Types of Security Zones
 •	Uncontrolled Zone: This refers to any network outside an organization's control, such as the internet.
 •	Controlled Zone: This subnet protects the internal network from the uncontrolled zone and includes various sub-zones.
-Zones within the Controlled Network
+
+### Zones within the Controlled Network
 •	Demilitarized Zone (DMZ): This outer layer contains public-facing services like web servers and DNS servers, acting as a network perimeter.
 •	Internal Network: This zone holds private servers and data that require protection.
 •	Restricted Zone: Located within the internal network, this zone safeguards highly confidential information accessible only to privileged employees.
 
-Subnetting and CIDR
-Understanding Subnetting
+## Subnetting and CIDR
+
+### Understanding Subnetting
 •	Subnetting is the process of dividing a network into smaller, more manageable subnetworks, acting like a "network inside a network."
 •	This division is based on IP addresses and network masks, allowing devices within the same subnet to communicate more efficiently.
-Classless Inter-Domain Routing (CIDR)
+
+### Classless Inter-Domain Routing (CIDR)
 •	CIDR is a modern method for assigning subnet masks to IP addresses, replacing the older classful addressing system.
 •	CIDR IP addresses include an IP network prefix (e.g., 198.51.100.0/24) which specifies the range of IP addresses within that subnet.
-Security Benefits of Subnetting
+
+### Security Benefits of Subnetting
 •	Subnetting allows organizations to create isolated subnetworks, improving network performance and bandwidth usage.
 •	It contributes to security by enabling the creation of security zones and isolating parts of the network through physical isolation, routing configuration, and firewalls.
-Proxy servers
-Proxy Server Fundamentals
+
+## Proxy servers
+
+### Proxy Server Fundamentals
 •	A proxy server acts as an intermediary between the internet and an internal network, fulfilling client requests by forwarding them to other servers.
 •	It possesses a public IP address, distinct from the private network's IP, which helps hide the internal network's IP address from external malicious actors.
-Security and Efficiency Benefits
+
+### Security and Efficiency Benefits
 •	Proxy servers can block access to unsafe websites, preventing users from visiting prohibited sites on an organization's network.
 •	They use temporary memory to store frequently requested data, reducing the need to fetch information from internal servers repeatedly and thus limiting contact with the internal network.
-Types of Proxy Servers
+
+### Types of Proxy Servers
 •	Forward proxy servers regulate and restrict a user's internet access, hiding their IP address and approving outgoing requests.
 •	Reverse proxy servers manage internet access to internal servers, accepting and approving external traffic before forwarding it to protect internal web servers.
 
-Virtual networks and privacy
-Network Protocols
+## Virtual networks and privacy
+
+### Network Protocols
 •	Network protocols are rules that direct traffic to the correct device and service, ensuring a mutually agreed-upon foundation for data transfer.
 •	They are categorized into communication protocols (e.g., TCP, UDP, SMTP), management protocols (e.g., ICMP), and security protocols (e.g., IPSec, SSL/TLS).
-Network Security Tools
-•	Firewalls inspect and filter network traffic, with stateless firewalls operating on predefined rules and stateful firewalls tracking information to proactively filter threats. Next-generation firewalls (NGFWs) offer advanced protection with deep packet inspection and intrusion prevention.
-•	Proxy servers act as a barrier between internal clients and external resources, using Network Address Translation (NAT) to enhance security. Forward proxies handle internal client requests to external resources, while reverse proxies manage external requests to internal services.
+
+### Network Security Tools
+•	Firewalls inspect and filter network traffic, with stateless firewalls operating on predefined rules and stateful firewalls tracking information to proactively filter threats. Next-generation[...]
+•	Proxy servers act as a barrier between internal clients and external resources, using Network Address Translation (NAT) to enhance security. Forward proxies handle internal client requests to[...]
 •	Virtual Private Networks (VPNs) encrypt data in transit and disguise IP addresses through encapsulation, protecting communications for both organizations and individuals.
-Wrap-up
-Common Network Protocols
+
+### Wrap-up
+•	Common Network Protocols
 •	The course reviewed common network protocols such as TCP, ARP, HTTPS, and DNS, which are fundamental for network communication.
-Network Security Measures
+
+### Network Security Measures
 •	It covered how Virtual Private Networks (VPNs) are used to maintain privacy and security when using public networks.
 •	The summary also touched upon how firewalls, security zones, and proxy servers contribute to securing network infrastructure.
-Importance for Security Analysts
-•	Understanding these tools, protocols, and techniques is crucial for ensuring networks run smoothly and securely, and this knowledge is essential for any security analyst role.
-Connect and Protect: Module 3
 
-Secure against network intrusions
-The case for securing networks
-Reasons for Network Security
+### Importance for Security Analysts
+•	Understanding these tools, protocols, and techniques is crucial for ensuring networks run smoothly and securely, and this knowledge is essential for any security analyst role.
+
+## Connect and Protect: Module 3
+
+## Secure against network intrusions
+
+### The case for securing networks
+
+### Reasons for Network Security
 •	Networks are constantly vulnerable to attacks from malicious actors.
 •	Attacks can involve malware, spoofing, packet sniffing, and packet flooding.
-Impact of Network Attacks
+
+### Impact of Network Attacks
 •	Attacks can lead to catastrophic consequences, including the leakage of valuable or confidential information.
 •	Organizations may suffer damage to their reputation, loss of customer retention, and significant costs for mitigation.
-Real-World Example
-•	The 2014 Home Depot data breach, where hackers stole credit and debit card information of over 56 million customers, illustrates the severe impact of cyberattacks.
-•	
-How intrusions compromise your system
 
+### Real-World Example
+•	The 2014 Home Depot data breach, where hackers stole credit and debit card information of over 56 million customers, illustrates the severe impact of cyberattacks.
+
+### How intrusions compromise your system
 
 This reading focuses on understanding network vulnerabilities, specifically network interception and backdoor attacks, and their potential impact on organizations.
-Network Interception Attacks
+
+### Network Interception Attacks
 •	These attacks involve malicious actors intercepting network traffic to steal information or interfere with data transmission.
 •	Techniques like packet sniffing allow attackers to capture and inspect data, and they can also alter messages or insert malicious code.
-Backdoor Attacks
+
+### Backdoor Attacks
 •	Backdoors are intentional weaknesses left by programmers or administrators to bypass normal access controls, often for troubleshooting.
-•	Attackers can exploit these backdoors to gain persistent access to a compromised network, enabling them to install malware, launch Denial of Service (DoS) attacks, or steal private information.
-Possible Impacts on an Organization
+•	Attackers can exploit these backdoors to gain persistent access to a compromised network, enabling them to install malware, launch Denial of Service (DoS) attacks, or steal private informatio[...]
+
+### Possible Impacts on an Organization
 •	Financial: Network attacks can lead to significant financial losses due to interrupted operations, reparation costs, ransomware, and potential litigation from compromised customer data.
 •	Reputation: Cyberattacks can damage an organization's reputation, leading to a loss of public trust and customers.
 •	Public Safety: Attacks on critical infrastructure like power grids or defense systems can have severe consequences for public safety and national security.
 
-Secure networks against Denial of Service (DoS) attacks
-Denial of Service (DoS) attacks
-Denial of Service (DoS) Attacks
+## Secure networks against Denial of Service (DoS) attacks
+
+### Denial of Service (DoS) attacks
+
+### Denial of Service (DoS) Attacks
 •	DoS attacks flood a network or server with traffic to disrupt normal business operations, potentially leading to financial losses and increased vulnerability to other security threats.
 •	A Distributed Denial of Service (DDoS) attack uses multiple devices from various locations to flood the target network, making it more effective due to the sheer volume of traffic.
-Network-Level DoS Attacks
-•	SYN Flood Attack: This attack exploits the TCP handshake process by sending numerous SYN requests to a server. If the number of requests exceeds available ports, the server becomes overwhelmed and crashes.
-•	ICMP Flood Attack: Attackers repeatedly send ICMP packets to a server, forcing it to send ICMP replies. This consumes bandwidth for both incoming and outgoing traffic, leading to a server crash.
-Ping of Death Attack
+
+### Network-Level DoS Attacks
+•	SYN Flood Attack: This attack exploits the TCP handshake process by sending numerous SYN requests to a server. If the number of requests exceeds available ports, the server becomes overwhelme[...]
+•	ICMP Flood Attack: Attackers repeatedly send ICMP packets to a server, forcing it to send ICMP replies. This consumes bandwidth for both incoming and outgoing traffic, leading to a server cra[...]
+
+### Ping of Death Attack
 •	This DoS attack involves sending an oversized ICMP packet (larger than 64 kilobytes) to a vulnerable system. The excessively large packet overloads the system, causing it to crash.
 
-Read tcpdump logs
-
+### Read tcpdump logs
 
 This reading introduces network protocol analyzers, focusing on tcpdump as a key tool for cybersecurity analysts to monitor and analyze network traffic.
-Understanding Network Protocol Analyzers
+
+### Understanding Network Protocol Analyzers
 •	Network protocol analyzers, also known as packet sniffers, capture and analyze data traffic within a network to identify suspicious activity.
 •	Common analyzers include SolarWinds NetFlow Traffic Analyzer, ManageEngine OpManager, Azure Network Watcher, Wireshark, and tcpdump.
-tcpdump: A Command-Line Analyzer
+
+### tcpdump: A Command-Line Analyzer
 •	tcpdump is a popular, lightweight, command-line network protocol analyzer that uses the open-source libpcap library.
 •	It provides brief packet analysis, converting key network traffic information into human-readable formats, and is compatible with Unix-based operating systems like Linux and macOS.
-Interpreting and Using tcpdump Output
+
+### Interpreting and Using tcpdump Output
 •	tcpdump output includes important information such as timestamp, source IP and port, and destination IP and port, which helps in understanding network communication.
-•	Network protocol analyzers are used to establish baselines for network traffic, detect malicious activity, troubleshoot performance issues, and identify unauthorized communication, though they can also be misused by attackers to capture sensitive data.
+•	Network protocol analyzers are used to establish baselines for network traffic, detect malicious activity, troubleshoot performance issues, and identify unauthorized communication, though the[...]
 
+## Network attack tactics and defense
 
-Network attack tactics and defense
-Malicious packet sniffing
-Understanding Packet Sniffing
+### Malicious packet sniffing
+
+### Understanding Packet Sniffing
 •	Packet sniffing involves using software tools to capture and analyze data packets as they travel across a network.
 •	These packets contain valuable information in their body, such as personal messages, financial details, and credit card numbers, along with sender and receiver IP addresses in the header.
-Malicious Use of Packet Sniffing
+
+### Malicious Use of Packet Sniffing
 •	Threat actors can use packet sniffing to gain unauthorized access to information by inserting themselves into an authorized connection between devices.
 •	They can also manipulate data in transit, such as altering bank account numbers, to their advantage.
-Types of Packet Sniffing and Prevention
+
+### Types of Packet Sniffing and Prevention
 •	Passive packet sniffing involves reading data packets in transit without altering them, similar to someone reading mail they are delivering.
 •	Active packet sniffing involves manipulating data packets in transit, such as redirecting them or changing their content.
 •	To prevent malicious packet sniffing, it's recommended to use a VPN for data encryption, ensure websites use HTTPS, and avoid unprotected public Wi-Fi networks.
 
-IP Spoofing
-Understanding IP Spoofing
+### IP Spoofing
+
+### Understanding IP Spoofing
 •	IP spoofing involves an attacker impersonating an authorized system to gain network access, bypassing firewall rules.
 •	The attacker modifies the sender's IP address in data packets to match an authorized user or system.
-Types of IP Spoofing Attacks
+
+### Types of IP Spoofing Attacks
 •	On-path attacks: The attacker positions themselves between two communicating devices, intercepts data, and then uses the sniffed IP and MAC addresses to impersonate either device.
 •	Replay attacks: A malicious actor intercepts data packets and either delays them to cause connection issues or repeats them later to impersonate an authorized user.
 •	Smurf attacks: This combines a Distributed Denial of Service (DDoS) attack with IP spoofing, where an attacker floods a target's spoofed IP address with packets, overwhelming the system.
-Protecting Against IP Spoofing
-•	Encryption: Always implement encryption to prevent malicious actors from reading data in transit.
-•	Firewall Configuration: Configure firewalls to reject incoming traffic from the internet that has an IP address matching the local network, as such traffic should originate from within the private network.
 
-Overview of interception tactics
-Packet Sniffing
+### Protecting Against IP Spoofing
+•	Encryption: Always implement encryption to prevent malicious actors from reading data in transit.
+•	Firewall Configuration: Configure firewalls to reject incoming traffic from the internet that has an IP address matching the local network, as such traffic should originate from within the pr[...]
+
+### Overview of interception tactics
+
+### Packet Sniffing
 •	Packet sniffing involves capturing and inspecting data packets across a network.
 •	Malicious actors can set a device's Network Interface Card (NIC) to "promiscuous mode" to capture all network traffic, even packets not addressed to that specific device.
-IP Spoofing
+
+### IP Spoofing
 •	After sniffing packets, attackers can impersonate authorized devices' IP and MAC addresses to perform IP spoofing attacks.
 •	Firewalls can help prevent IP spoofing by refusing unauthorized IP packets and suspicious traffic.
-Common IP Spoofing Attacks
-•	On-path attacks (also known as meddler-in-the-middle attacks) occur when a hacker intercepts communication between two trusted devices, potentially collecting sensitive information or redirecting DNS lookups to malicious sites.
-•	Smurf attacks combine IP spoofing with a denial-of-service (DoS) technique, flooding a network with unwanted traffic by spoofing an authorized user's IP address and sending packets to the broadcast address, overwhelming network servers.
 
-Connect and Protect: Module 4
+### Common IP Spoofing Attacks
+•	On-path attacks (also known as meddler-in-the-middle attacks) occur when a hacker intercepts communication between two trusted devices, potentially collecting sensitive information or redirec[...]
+•	Smurf attacks combine IP spoofing with a denial-of-service (DoS) technique, flooding a network with unwanted traffic by spoofing an authorized user's IP address and sending packets to the bro[...]
 
-Introduction to security hardening
-Security hardening
-Understanding Security Hardening
+## Connect and Protect: Module 4
+
+## Introduction to security hardening
+
+### Security hardening
+
+### Understanding Security Hardening
 •	Security hardening is the process of strengthening a system to minimize its vulnerability and attack surface, which refers to all potential weaknesses a threat actor could exploit.
 •	It's comparable to securing a house by locking all doors and windows, aiming to reduce potential entry points for attackers.
-Hardening Procedures and Examples
+
+### Hardening Procedures and Examples
 •	Security hardening can be applied to various components like hardware, operating systems, applications, networks, and databases, and also includes physical security measures.
 •	Common procedures involve software updates (patches), configuration changes like requiring stronger passwords, and updating encryption standards to protect data.
-Strategies for Enhanced Security
+
+### Strategies for Enhanced Security
 •	Other hardening examples include removing unused applications, disabling unnecessary ports, and reducing access permissions to make monitoring more efficient and decrease the attack surface.
 •	Regular penetration testing, or pen tests, are simulated attacks that help identify and document vulnerabilities, allowing organizations to plan and implement necessary fixes.
 
-OS hardening
-OS hardening practices
+## OS hardening
 
+### OS hardening practices
 
 This video explains operating system (OS) hardening, a crucial practice for maintaining and improving the security of an entire network.
-Importance of OS Hardening
+
+### Importance of OS Hardening
 •	The OS acts as the interface between computer hardware and the user, and it's the first program loaded when a computer turns on.
 •	An insecure OS on even one system can compromise the entire network, making OS hardening essential for overall security.
-Regular OS Hardening Practices
-•	Patch Installation: Regularly updating the OS to its latest software version and applying security patches as soon as they are released is critical to address vulnerabilities that malicious actors could exploit.
-•	Hardware and Software Disposal: Properly wiping and disposing of old hardware and deleting unused software applications helps prevent unnecessary vulnerabilities associated with outdated or unneeded programs.
-One-Time and Ongoing Security Measures
-•	Baseline Configuration: Establishing a documented set of specifications for a system allows security teams to compare the current configuration against the baseline to detect any unauthorized changes.
-•	Strong Password Policy: Implementing policies that require complex passwords (e.g., minimum length, capital letters, numbers, symbols) and multi-factor authentication (MFA) significantly enhances access security.
 
-Brute force attacks and OS hardening
-Brute Force Attacks
+### Regular OS Hardening Practices
+•	Patch Installation: Regularly updating the OS to its latest software version and applying security patches as soon as they are released is critical to address vulnerabilities that malicious a[...]
+•	Hardware and Software Disposal: Properly wiping and disposing of old hardware and deleting unused software applications helps prevent unnecessary vulnerabilities associated with outdated or u[...]
+
+### One-Time and Ongoing Security Measures
+•	Baseline Configuration: Establishing a documented set of specifications for a system allows security teams to compare the current configuration against the baseline to detect any unauthorized[...]
+•	Strong Password Policy: Implementing policies that require complex passwords (e.g., minimum length, capital letters, numbers, symbols) and multi-factor authentication (MFA) significantly enha[...]
+
+### Brute force attacks and OS hardening
+
+### Brute Force Attacks
 •	A brute force attack is a trial-and-error method used to discover private information, often login credentials.
 •	Types include simple brute force, where attackers guess combinations of usernames and passwords, and dictionary attacks, which use lists of common or stolen credentials.
-Assessing Vulnerabilities
+
+### Assessing Vulnerabilities
 •	Organizations can use virtual machines (VMs) and sandboxes to test networks and applications for vulnerabilities before an attack occurs.
-•	VMs are software versions of physical computers that provide an isolated environment for running suspicious code, while sandboxes are testing environments for executing software separate from the network.
-Prevention Measures
+•	VMs are software versions of physical computers that provide an isolated environment for running suspicious code, while sandboxes are testing environments for executing software separate from[...]
+
+### Prevention Measures
 •	Common prevention methods include salting and hashing passwords to increase their complexity and security.
 •	Multi-factor authentication (MFA) and two-factor authentication (2FA) require multiple verification methods, and CAPTCHA/reCAPTCHA help distinguish humans from bots.
 
-Network hardening
-Network hardening practices
-Regular Network Hardening Tasks
-•	Firewall Rules and Log Analysis: Maintaining firewall rules and analyzing network logs are ongoing tasks. Security Information and Event Management (SIEM) tools are used to collect, analyze, and present log data on a single dashboard, helping security teams identify and prioritize security events.
+## Network hardening
+
+### Network hardening practices
+
+### Regular Network Hardening Tasks
+•	Firewall Rules and Log Analysis: Maintaining firewall rules and analyzing network logs are ongoing tasks. Security Information and Event Management (SIEM) tools are used to collect, analyze, [...]
 •	Patch Updates and Server Backups: Regularly applying patch updates and performing server backups are essential for maintaining network security and data integrity.
-One-Time Network Hardening Tasks
-•	Port Filtering: This involves configuring firewalls to block or allow specific port numbers, limiting unwanted communication and protecting against port vulnerabilities. Only necessary ports should be open.
-•	Network Access Privileges and Segmentation: Implementing appropriate network access privileges ensures that only authorized users can access specific parts of the network. Network segmentation creates isolated subnets for different departments or security zones, preventing issues from spreading across the entire company and protecting sensitive data.
+
+### One-Time Network Hardening Tasks
+•	Port Filtering: This involves configuring firewalls to block or allow specific port numbers, limiting unwanted communication and protecting against port vulnerabilities. Only necessary ports [...]
+•	Network Access Privileges and Segmentation: Implementing appropriate network access privileges ensures that only authorized users can access specific parts of the network. Network segmentatio[...]
 •	Encryption: All network communication should be encrypted using the latest standards, especially for data in restricted zones, to conceal outgoing data and securely decrypt incoming data.
 
-Network security applications
-Key Network Security Devices
-•	Firewalls: These devices filter network traffic based on predefined rules, allowing or blocking data packets by inspecting their headers and sometimes payloads (in the case of Next-Generation Firewalls).
-•	Intrusion Detection Systems (IDS): An IDS monitors network activity for signatures of known attacks or anomalies, alerting administrators to potential intrusions without actively stopping the traffic.
-Advanced Security Measures
-•	Intrusion Prevention Systems (IPS): Building on IDS capabilities, an IPS actively blocks suspicious activity and drops malicious packets, providing a higher level of protection by preventing threats from reaching sensitive network areas.
-•	Security Information and Event Management (SIEM) Tools: SIEM systems collect and analyze log data from various security devices in real-time, offering a centralized dashboard for security analysts to monitor and respond to suspicious activities.
-Layered Security Benefits and Considerations
+## Network security applications
+
+### Key Network Security Devices
+•	Firewalls: These devices filter network traffic based on predefined rules, allowing or blocking data packets by inspecting their headers and sometimes payloads (in the case of Next-Generation[...]
+•	Intrusion Detection Systems (IDS): An IDS monitors network activity for signatures of known attacks or anomalies, alerting administrators to potential intrusions without actively stopping the[...]
+
+### Advanced Security Measures
+•	Intrusion Prevention Systems (IPS): Building on IDS capabilities, an IPS actively blocks suspicious activity and drops malicious packets, providing a higher level of protection by preventing [...]
+•	Security Information and Event Management (SIEM) Tools: SIEM systems collect and analyze log data from various security devices in real-time, offering a centralized dashboard for security ana[...]
+
+### Layered Security Benefits and Considerations
 •	Defense in Depth: Each tool (firewall, IDS, IPS, SIEM) adds a layer of security, incrementally hardening the network from a minimum to a higher level of protection.
-•	Limitations and Trade-offs: While these tools enhance security, they have limitations such as the inability to detect all new attacks (IDS), potential for false positives (IPS), and the need for human expertise for analysis (SIEM). Organizations must balance cost and risk when selecting and implementing these security measures.
+•	Limitations and Trade-offs: While these tools enhance security, they have limitations such as the inability to detect all new attacks (IDS), potential for false positives (IPS), and the need [...]
 
-Devices / Tools
+### Devices / Tools
 
-Firewall
-Advantages
-A firewall allows or blocks traffic based on a set of rules.
-Disadvantages
-A firewall is only able to filter packets based on information provided in the header of the packets. 
+#### Firewall
+**Advantages**
+- A firewall allows or blocks traffic based on a set of rules.
 
-Intrusion Detection System (IDS)
-Advantages
-An IDS detects and alerts admins about possible intrusions, attacks, and other malicious traffic.
-Disadvantages
-An IDS can only scan for known attacks or obvious anomalies; new and sophisticated attacks might not be caught. It doesn’t actually stop the incoming traffic.
+**Disadvantages**
+- A firewall is only able to filter packets based on information provided in the header of the packets.
 
-Intrusion Prevention System (IPS)
-Advantages
-An IPS monitors system activity for intrusions and anomalies and takes action to stop them.
-Disadvantages
-An IPS is an inline appliance. If it fails, the connection between the private network and the internet breaks. It might detect false positives and block legitimate traffic.
+#### Intrusion Detection System (IDS)
+**Advantages**
+- An IDS detects and alerts admins about possible intrusions, attacks, and other malicious traffic.
 
+**Disadvantages**
+- An IDS can only scan for known attacks or obvious anomalies; new and sophisticated attacks might not be caught. It doesn't actually stop the incoming traffic.
 
+#### Intrusion Prevention System (IPS)
+**Advantages**
+- An IPS monitors system activity for intrusions and anomalies and takes action to stop them.
 
-Security Information and Event Management (SIEM)
-Advantages
-A SIEM tool collects and analyzes log data from multiple network machines. It aggregates security events for monitoring in a central dashboard.
-Disadvantages
-A SIEM tool only reports on possible security issues. It does not take any actions to stop or prevent suspicious events.
+**Disadvantages**
+- An IPS is an inline appliance. If it fails, the connection between the private network and the internet breaks. It might detect false positives and block legitimate traffic.
 
-Network security in the cloud
+#### Security Information and Event Management (SIEM)
+**Advantages**
+- A SIEM tool collects and analyzes log data from multiple network machines. It aggregates security events for monitoring in a central dashboard.
 
-Securing Cloud Networks
+**Disadvantages**
+- A SIEM tool only reports on possible security issues. It does not take any actions to stop or prevent suspicious events.
+
+## Network security in the cloud
+
+### Securing Cloud Networks
 •	Organizations are increasingly using cloud services, making cloud network security a critical aspect of a security analyst's role.
 •	Cloud networks, like regular web servers, require proper maintenance and security hardening procedures to protect against intrusions.
-Cloud vs. Traditional Network Hardening
+
+### Cloud vs. Traditional Network Hardening
 •	A key distinction in cloud network hardening is the use of a server baseline image to detect unverified changes that could indicate an intrusion.
 •	Similar to OS hardening, data and applications on a cloud network should be separated based on their service category (e.g., older vs. newer applications, internal vs. front-end functions).
-Shared Responsibility in Cloud Security
+
+### Shared Responsibility in Cloud Security
 •	While cloud service providers share responsibility for security, organizations must still implement their own measures to ensure the safety of their cloud networks.
 •	Securing operations in the cloud is just as crucial as securing traditional networks.
 
+### Cloud security explained
 
-Cloud security explained
-Cloud vs. Private Data Centers
+### Cloud vs. Private Data Centers
 •	Before cloud computing, companies managed their own private data centers, which offered complete control but often lacked robust security measures due to the isolated environment.
-•	Cloud computing, in contrast, is public and necessitates a different security approach, similar to how one would secure their belongings when living with roommates, emphasizing the need for heightened security discipline.
-Gaining Practical Cloud Experience
+•	Cloud computing, in contrast, is public and necessitates a different security approach, similar to how one would secure their belongings when living with roommates, emphasizing the need for h[...]
+
+### Gaining Practical Cloud Experience
 •	To effectively utilize cloud skills, it is crucial to actively use cloud platforms by deploying existing software and using tools to identify vulnerabilities.
 •	Learning and mastering these tools is essential as they are used by professionals to secure cloud environments, providing a superpower to define one's career path.
-Secure the cloud
-Cloud Security Challenges
+
+### Secure the cloud
+
+### Cloud Security Challenges
 •	Cloud computing offers benefits like ease and speed of deployment, cost savings, and scalability, but it also introduces unique security challenges.
 •	These challenges include managing identity access, ensuring proper configuration of cloud services, and addressing an expanded attack surface due to numerous applications and services.
-Addressing Cloud Security Concerns
+
+### Addressing Cloud Security Concerns
 •	Organizations often worry about data privacy in the cloud, which is addressed through cryptography and other security measures.
 •	Cloud Service Providers (CSPs) are generally more likely to be aware of and patch zero-day attacks than traditional IT organizations, ensuring customer protection.
-Shared Responsibility Model
+
+### Shared Responsibility Model
 •	The shared responsibility model defines that CSPs are responsible for the security of the cloud infrastructure (e.g., physical data centers, hypervisors).
 •	Organizations using cloud services are responsible for security in the cloud, including their data, applications, and the proper configuration of services.
 
-Cryptography and cloud security
-Cloud Security Hardening Techniques
+### Cryptography and cloud security
+
+### Cloud Security Hardening Techniques
 •	Identity and Access Management (IAM): This involves processes and technologies for managing digital identities and authorizing user access to cloud resources.
-•	Hypervisors: These abstract hardware from the operating system. Type one hypervisors run directly on hardware and are commonly used by Cloud Service Providers (CSPs), who are responsible for their management and security.
-Baselining and Cryptography
-•	Baselining: This involves establishing a fixed reference point for cloud environment configurations to compare changes and improve security and performance. Examples include restricting admin access and enabling file encryption.
-•	Cryptography in the Cloud: This uses encryption and secure key management to protect data integrity and confidentiality. Encryption scrambles information into ciphertext, making it unreadable without the correct key.
-Cryptographic Erasure and Key Management
-•	Cryptographic Erasure (Crypto-shredding): This method involves destroying encryption keys to render encrypted data undecipherable, which is a more effective way to destroy data in the cloud than traditional methods.
-•	Key Management: Modern encryption relies on keeping keys secure. Tools like Trusted Platform Modules (TPM) and Cloud Hardware Security Modules (CloudHSM) provide secure storage for encryption keys.
+•	Hypervisors: These abstract hardware from the operating system. Type one hypervisors run directly on hardware and are commonly used by Cloud Service Providers (CSPs), who are responsible for [...]
 
+### Baselining and Cryptography
+•	Baselining: This involves establishing a fixed reference point for cloud environment configurations to compare changes and improve security and performance. Examples include restricting admin[...]
+•	Cryptography in the Cloud: This uses encryption and secure key management to protect data integrity and confidentiality. Encryption scrambles information into ciphertext, making it unreadable[...]
 
-Skills obtained in this course.
-OS hardening practices
-Network hardening practices
-Network security applications
-Cloud security
-Cryptography and cloud security
-Review:
+### Cryptographic Erasure and Key Management
+•	Cryptographic Erasure (Crypto-shredding): This method involves destroying encryption keys to render encrypted data undecipherable, which is a more effective way to destroy data in the cloud t[...]
+•	Key Management: Modern encryption relies on keeping keys secure. Tools like Trusted Platform Modules (TPM) and Cloud Hardware Security Modules (CloudHSM) provide secure storage for encryption[...]
+
+## Skills obtained in this course
+
+- OS hardening practices
+- Network hardening practices
+- Network security applications
+- Cloud security
+- Cryptography and cloud security
+
+## Review
+
 This course item reviews the key concepts covered in the course, focusing on network security for security analysts.
-Network Structure and Operations
+
+### Network Structure and Operations
 •	A security analyst needs to understand network design to identify vulnerabilities.
 •	Network protocols dictate data transmission, and malicious actors can exploit this with attacks like denial of service, packet sniffing, and IP spoofing.
-Security Measures and Hardening
+
+### Security Measures and Hardening
 •	Security analysts use tools like firewall rules to protect against network attacks.
 •	Security hardening reduces a network's attack surface, preventing an attack from disabling the entire network.
-Levels of Security Hardening
+
+### Levels of Security Hardening
 •	Security hardening can be implemented at the hardware, software, or network level.
 •	Knowledge of network operations and security practices is crucial for a successful career as a security analyst.
-
-
