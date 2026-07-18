@@ -2,7 +2,7 @@
 
 This folder contains security audit reports, checklists, and supporting documentation for the cybersecurity portfolio.
 
-Guidelines:
+Ai formating Guidelines:
 - Add one audit per subfolder or file, named clearly (e.g., "2026-07-internal-audit.md").
 - Include scope, findings, remediation steps, and status in each audit.
 - Keep sensitive data out of the repo; redact or summarize any confidential information.
@@ -59,7 +59,4 @@ Below is a short, easy-to-scan summary of each item in this folder with a link t
 
 ---
 
-If you'd like, I can:
-- Tweak wording to target a specific job (e.g., SOC analyst, security engineer, or security auditor),
-- Add short one-line "skills" tags (e.g., Incident Response, Risk Assessment, Network Analysis) next to each entry, or
-- Add direct links to example excerpts (snippets) from each report so recruiters can jump to the most relevant parts.
+
