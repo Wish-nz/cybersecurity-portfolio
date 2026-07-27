@@ -1,0 +1,856 @@
+Course 4 - Tools of the Trade - Linux and SQL
+Course 4 overview
+Course Objectives
+•	Develop a strong understanding of operating systems, including their relationship with hardware and software.
+•	Learn to communicate with the Linux operating system using commands and query databases with Structured Query Language (SQL).
+Course Structure
+•	Module 1: Introduction to operating systems: Covers the basics of operating systems, their functions, and how users interact with them through graphical and command-line interfaces.
+•	Module 2: The Linux operating system: Introduces Linux, its architecture, common distributions, and its use in cybersecurity.
+•	Module 3: Linux commands in the Bash shell: Focuses on using Bash shell commands to navigate and manage the file system, and to authorize and authenticate users.
+•	Module 4: Databases and SQL: Teaches how to use SQL to communicate with databases, query data, filter results, and join multiple tables.
+Learning Opportunities
+•	The course offers various learning methods, including videos, readings, discussion prompts, self-review activities, labs, and quizzes.
+•	It is recommended to follow the course items in order, participate in all learning opportunities, and utilize additional resources for a comprehensive learning experience.
+
+Module 1: Introduction to operating systems
+ The Role of Operating Systems
+•	Operating systems are essential for computers to function, enabling everything from specialized work applications to sending emails.
+•	They manage the relationship between applications and hardware, allowing them to work together seamlessly.
+User Interfaces
+•	The course will explore both graphical user interfaces (GUIs) and command-line interfaces (CLIs).
+•	The command-line interface will be a crucial skill for security analysts.
+Importance for Security Analysts
+•	Understanding operating systems provides a foundational knowledge base for a career in security.
+•	The course will delve into various aspects of operating systems, highlighting their relevance to security analysis.
+
+Introduction to operating systems
+What is an Operating System?
+•	An operating system acts as the interface between a computer's hardware and the user, ensuring the computer runs efficiently and is easy to use.
+•	Early computers in the 1950s lacked operating systems, requiring manual resets and program loading for each task, which was highly inefficient.
+Evolution and Functions of Operating Systems
+•	Modern operating systems allow computers to run multiple applications simultaneously and interact with external devices like printers and keyboards.
+•	They bridge the communication gap between humans and computers by translating user commands into binary language (0s and 1s) that computers understand.
+Importance of OS Security
+•	Operating system security is crucial for protecting files, controlling data access, and authenticating users to defend against threats like viruses and malware.
+•	A strong understanding of OS is essential for security professionals to perform tasks such as configuring system security, managing firewalls, setting security policies, and conducting auditing to detect unusual behaviour.
+
+Compare operating systems
+Common Operating Systems
+•	Windows and macOS: Both are widely used in personal and enterprise settings. Windows is closed-source, while macOS is partially open-source.
+•	Linux: A completely open-source operating system, Linux is particularly important in the security industry due to its customizable distributions.
+•	ChromeOS, Android, and iOS: ChromeOS is partially open-source and often used in education. Android and iOS are mobile operating systems, with Android being open-source and iOS partially open-source.
+Operating Systems and Vulnerabilities
+•	Inevitable Security Issues: All operating systems have security vulnerabilities, making regular updates crucial for protection.
+•	Legacy Operating Systems: These are outdated systems that are no longer supported or updated, making them highly vulnerable to new threats. Organizations may still use them due to software compatibility issues.
+
+The operating system at work
+Booting the Computer
+•	When you press the power button, the computer activates a special microchip (BIOS or UEFI) that contains booting instructions.
+•	These instructions load a program called the bootloader, which then starts the operating system.
+OS and Application Interaction
+•	When you use an application, it sends your request to the operating system.
+•	The OS interprets this request and directs it to the appropriate hardware component, which then sends information back to the OS and subsequently to the application.
+Importance for Security Analysts
+•	Understanding these processes is crucial for security analysts to identify vulnerabilities, such as those that can occur during the booting process.
+•	It also helps in tracing security events by understanding the flow of information between applications, the OS, and hardware.
+
+Requests to the operating system
+
+Booting the Computer
+•	When you turn on your computer, either a BIOS (Basic Input/Output System) or UEFI (Unified Extensible Firmware Interface) microchip is activated.
+•	These chips contain loading instructions, such as verifying hardware health, and ultimately activate the bootloader, which then boots the operating system.
+Completing a Task
+•	The process of completing a task involves four parts: the user initiates a task, an application receives the request, the operating system interprets and directs the request to the hardware, and the hardware performs the processing.
+•	After processing, the hardware sends the output back through the operating system to the application, which then displays the results to the user.
+The OS at Work Behind the Scenes
+•	The operating system works in the background, similar to how a car engine operates or a restaurant kitchen prepares food, without direct user observation.
+•	It is crucial for interpreting user requests and ensuring tasks are completed, even though its processes are not always transparent to the user.
+
+Resource allocation via the OS
+OS as a Resource Manager
+•	The OS balances and efficiently uses system resources, similar to how a person manages energy for different tasks.
+•	It ensures that various programs, tasks, and processes share the CPU, memory, storage, and input/output bandwidth effectively.
+OS Functions and User Visibility
+•	The OS allocates and de-allocates resources for each program, a process largely hidden from the user.
+•	Tools like the task manager allow users to see how resources are being utilized by different tasks, including memory and CPU usage.
+Importance for Security Analysts
+•	Understanding resource usage is crucial for security analysts to respond to incidents and troubleshoot applications.
+•	For example, slow computer performance could indicate malware allocating system resources, which an analyst can identify by monitoring resource consumption.
+
+Virtualization technology
+Understanding Virtual Machines and Virtualization
+•	A virtual machine is a software-based version of a physical computer, simulating hardware like CPU and storage.
+•	Virtualization is the process of creating virtual representations of physical machines using software, allowing multiple VMs to run on a single physical computer by sharing its resources.
+Benefits of Virtual Machines
+•	Security: VMs provide isolated environments, or "sandboxes," which can contain malware and prevent it from affecting the host machine or other VMs.
+•	Efficiency: VMs allow users to run multiple operating systems and applications simultaneously on one physical machine, streamlining tasks like testing and exploration.
+Managing Virtual Machines
+•	Hypervisors are software used to manage multiple virtual machines, allocate shared resources from the host machine, and connect virtual and physical hardware.
+•	KVM (Kernel-based Virtual Machine) is an open-source hypervisor built into the Linux kernel, enabling VM creation on Linux operating systems without additional software.
+
+
+
+The user interface
+GUI versus CLI
+User Interfaces: GUI vs. CLI
+•	A user interface (UI) is a program that allows users to control the functions of an operating system.
+•	Two main types are the Graphical User Interface (GUI) and the Command-Line Interface (CLI).
+Graphical User Interface (GUI)
+•	GUIs use icons and visual elements to manage tasks, similar to what you experience on personal computers and cell phones.
+•	Components often include a start menu, taskbar, and desktop icons, allowing users to click and search for programs.
+Command-Line Interface (CLI)
+•	CLIs are text-based interfaces that use commands to interact with the computer, offering more flexibility and power than GUIs.
+•	Unlike GUIs, CLIs allow for customization and the ability to complete multiple tasks simultaneously, which can be particularly useful for security analysts.
+
+The command line in use
+GUI vs. CLI: Display and Function
+•	Display: GUIs feature icons and graphics for managing tasks, while CLIs are text-based and resemble lines of code.
+•	Functionality: GUIs typically handle one request at a time, whereas CLIs can process multiple requests simultaneously, offering greater efficiency for complex tasks.
+Advantages of CLI in Cybersecurity
+•	Efficiency: CLIs can be more efficient for experienced users, especially when performing multiple tasks, such as creating numerous files, as they allow for multiple requests at once.
+•	History File: The Linux CLI records a history file of all commands and actions, which is crucial for security analysts to review steps during incident response or to trace potential attacker activity.
+
+Wrap-up
+Understanding Computer Basics for Security Analysts
+•	A strong understanding of computer systems, especially operating systems, is crucial for security analysts to perform their jobs effectively and efficiently.
+•	The section covered common operating systems and their main functions, highlighting the interconnectedness of operating systems, applications, and hardware.
+Graphical User Interface (GUI) vs. Command-Line Interface (CLI)
+•	The course differentiated between the graphical user interface (GUI) and the command-line interface (CLI).
+•	Understanding and utilizing the command-line interface is presented as a very important skill for a security analyst's work.
+
+Module 2:  The Linux operating system
+All about Linux
+Linux in the Security World
+•	Linux is a commonly used operating system in the security field due to its robust nature and flexibility.
+•	This section will explore how Linux is utilized for everyday security tasks.
+Key Aspects of Linux
+•	You will learn about the fundamental architecture that underpins the Linux operating system.
+•	The course will compare various Linux distributions, highlighting their unique features and applications.
+Interacting with Linux
+•	The shell, a crucial component of Linux, will be explored as the primary way to communicate with the system.
+•	Understanding the shell is essential for effective interaction and command execution within the Linux environment.
+
+Introduction to Linux
+ 
+This lesson introduces Linux, highlighting its significance in security and its core characteristics.
+The Origins of Linux
+•	Linux was developed in the early 1990s through the independent efforts of Linus Torvalds, who created the Linux kernel, and Richard Stallman, who initiated the GNU operating system.
+•	Both aimed to create an open-source, accessible operating system, with their combined innovations forming what is now known as Linux.
+Unique Aspects of Linux
+•	Linux is an open-source operating system, allowing free access, use, sharing, and modification of its source code under the GNU Public License.
+•	This open-source philosophy has fostered a large community of developers who collaborate to advance computing and create over 600 different distributions, or varieties, of Linux.
+Linux in Security Roles
+•	As a security analyst, you will use Linux to examine various logs for identifying system issues, such as error logs.
+•	Linux is also crucial for verifying access and authorization within identity and access management systems, and for utilizing specialized distributions with tools for tasks like digital forensics or penetration testing.
+
+
+
+
+Linux architecture
+The User and Applications
+•	User: As the user, you are the primary initiator of tasks and commands within the Linux operating system. Linux is designed as a multi-user system, allowing multiple individuals to utilize its resources concurrently.
+•	Applications: These are programs designed to perform specific tasks, such as word processing or calculations. Applications in Linux are frequently distributed and managed through package managers.
+Interacting with the System
+•	Shell: The shell acts as a command-line interpreter, serving as your primary interface for communicating with the Linux system. It processes your commands and displays the results.
+•	Filesystem Hierarchy Standard (FHS): The FHS is responsible for organizing data within the Linux OS, much like a filing cabinet. It provides a structured way to store and access data efficiently.
+Core System Management
+•	Kernel: The kernel is a fundamental component of Linux that manages processes and memory. It communicates directly with the hardware to execute commands and uses drivers to enable applications to perform their functions.
+•	Hardware: This refers to the physical components of your computer, such as the CPU, mouse, and keyboard, which the kernel interacts with to carry out operations.
+
+Linux architecture explained
+Linux Architecture Components
+•	User: The individual interacting with the computer, initiating and managing tasks in a multi-user system.
+•	Applications: Programs that perform specific tasks, often installed via a package manager in Linux.
+System Interaction and Organization
+•	Shell: The command-line interpreter that translates user commands into instructions for the kernel.
+•	Filesystem Hierarchy Standard (FHS): Organizes data by defining where files and directories are stored within the operating system.
+Core System Management and Hardware
+•	Kernel: Manages processes and memory, communicating with applications and controlling hardware functions.
+•	Hardware: The physical components of a computer, categorized as peripheral (e.g., monitors) or internal (e.g., CPU, RAM, hard drive).
+
+Linux distributions
+Linux Distributions: Customizable Operating Systems
+•	Linux is a highly customizable operating system with various versions known as distributions, distros, or flavors.
+•	Understanding the specific distribution you are using is crucial because each comes with its own set of tools and applications.
+The Kernel: The Core of Linux
+•	The Linux kernel is the fundamental component of the operating system, comparable to a vehicle's engine.
+•	Its open-source nature allows developers to modify it and create new distributions, much like a car manufacturer uses an engine to build different types of vehicles.
+Analogy: Vehicles and Linux Distributions
+•	Just as different vehicles (buses, trucks, airplanes) serve distinct purposes, various Linux distributions are designed for specific uses.
+•	Distributions differ in pre-installed programs, user interfaces, and other components, catering to diverse user needs and preferences.
+
+KALI LINUX ™
+Kali Linux Overview
+•	Kali Linux is specifically built for penetration testing and digital forensics, coming pre-installed with many relevant tools.
+•	It is recommended to use Kali Linux within a virtual machine to prevent system damage from improper tool use and to allow for reverting to previous states.
+Penetration Testing Tools
+•	Metasploit: Used to identify and exploit vulnerabilities in machines.
+•	Burp Suite: Helps in testing web applications for weaknesses.
+Digital Forensics Tools
+•	tcpdump: A command-line packet analyzer for capturing network traffic.
+•	Wireshark: A tool with a graphical user interface for analyzing live and captured network traffic.
+•	
+More Linux distributions
+KALI LINUX™
+•	KALI LINUX™ is an open-source, Debian-based distribution widely used for penetration testing and digital forensics due to its pre-installed tools.
+•	Penetration testing simulates attacks to find vulnerabilities, while digital forensics analyzes data after an attack.
+Other Notable Distributions
+•	Ubuntu: A user-friendly, open-source, Debian-derived distribution with both CLI and GUI, popular in security and cloud computing, offering extensive community support.
+•	Parrot: Another open-source, Debian-based distribution similar to KALI LINUX™ with pre-installed tools for penetration testing and digital forensics, known for its user-friendly GUI.
+Enterprise-Focused Distributions
+•	Red Hat® Enterprise Linux®: A subscription-based, enterprise-grade Linux distribution that provides dedicated support for customers.
+•	AlmaLinux: A community-driven, open-source distribution designed as a stable replacement for CentOS, ensuring compatibility with applications and configurations that ran on CentOS 8.
+
+
+Package managers for installing applications
+Introduction to Package Managers
+•	A package is a piece of software, potentially with dependencies, that forms an application.
+•	Package managers help resolve dependency issues and manage software installations.
+Types of Package Managers
+•	Different Linux distributions, such as those derived from Debian or Red Hat, use specific package managers.
+•	Examples include dpkg for Debian-derived systems (using .deb files) and Red Hat Package Manager (RPM) for Red Hat-derived systems (using .rpm files).
+Package Management Tools
+•	Tools like Advanced Package Tool (APT) for Debian-derived distributions and Yellowdog Updater Modified (YUM) for Red Hat-derived distributions simplify package management through the command line.
+•	These tools make it easier to perform tasks like installing new packages.
+
+Resources for completing Linux labs
+How to Use Qwiklabs
+•	To launch a lab, you'll click "Launch App" on a Coursera page, which opens a new tab with Qwiklabs instructions.
+•	Once in Qwiklabs, click "Start Lab" to open a temporary terminal and begin working through the lab instructions.
+Interacting within the Qwiklabs Environment
+•	The lab control dialog box includes an "End Lab" button, a timer, and an "Open Linux Console" button for a full-screen terminal view.
+•	You can check your progress at any time by clicking "Check my progress," which also provides hints if a task is incomplete.
+Helpful Navigation Tips and Keyboard Shortcuts
+•	You can copy and paste commands using keyboard shortcuts (e.g., CTRL + C for copying from instructions, CTRL + V for pasting into the terminal) after allowing clipboard access.
+•	Useful keyboard shortcuts within the terminal include CTRL + C to terminate a command, clear or CTRL + L to clear the screen, and arrow keys or CTRL + A/E to navigate within commands.
+
+Helpful navigation tips and keyboard shortcuts
+The following contains a list of navigation tips and keyboard shortcuts you may find useful when completing your Linux labs. Your cursor must be in the terminal window to use these navigation tips and keyboard shortcuts.
+•	CTRL + C: Terminates a command that is currently running; from the instructions portion of Qwiklabs, you can use CTRL + C to copy, but within the terminal, it will only terminate a command and if one isn't running, it will display ^C at the prompt
+•	CTRL + V: Pastes text
+•	clear: Clears the terminal screen; this can also be done by entering CTRL + L
+•	CTRL + A: Sets your cursor at the beginning of a command
+•	CTRL + E: Sets your cursor at the end of a command
+•	Left arrow key: Moves left within a command
+•	Right arrow key: Moves right within a command
+•	Up arrow key: Provides the last command you entered into the command line; can be entered multiple times to go through multiple commands from the command history
+•	Down arrow key: Provides the next command in the command history; must be after using the up arrow key
+•	Tab key: Provides available suggestions for completing your text 
+
+Exemplar: Install software in a Linux distribution
+APT Package Manager
+•	The APT (Advanced Package Tool) package manager simplifies the complex task of installing Linux applications, allowing for quick and reliable management of software.
+•	In this lab, a Debian-based Linux distribution is used, which works with APT. Other distributions might use different package managers like YUM.
+Installing and Uninstalling Applications
+•	To install an application, the sudo apt install [application_name] command is used, with sudo providing the necessary elevated privileges.
+•	To uninstall an application, the sudo apt remove [application_name] command is used, also requiring sudo privileges.
+Verifying and Listing Applications
+•	After installation, you can verify an application's presence by running its command (e.g., suricata).
+•	To list all installed applications, the apt list --installed command is used, which can then be searched to confirm specific installations.
+
+The shell
+Introduction to the shell
+The Linux Shell as a Command-Line Interpreter
+•	The shell acts as a command-line interpreter, facilitating communication between you and the operating system through the command line.
+•	It provides the command-line interface (CLI) where you input instructions, known as commands, for the OS to execute.
+How the Shell Interacts with the OS
+•	The shell translates your commands and communicates them to the kernel, which is the core of the operating system, for execution.
+•	It serves as a crucial "language interpreter" between you, who doesn't speak computer language, and the system, enabling you to perform various tasks.
+Capabilities and Types of Shells
+•	The shell allows you to perform mathematical operations, run tests, execute applications, and combine these operations for complex, automated tasks.
+•	Just as there are many Linux distributions, there are various types of shells, with the Bash shell being the primary focus of this course.
+Different types of shells
+Understanding Linux Shells
+•	A shell acts as a translator between the user and the computer system, executing commands and returning responses.
+•	When a command is entered, the shell interprets it, sends it to the kernel, and then displays the results.
+Types of Linux Shells
+•	There are various Linux shells, including Bourne-Again Shell (bash), C Shell (csh), Korn Shell (ksh), Enhanced C shell (tcsh), and Z Shell (zsh).
+•	While all shells use common Linux commands, they can differ in features like the prompt symbol (e.g., $ for bash and ksh, % for zsh).
+The Bash Shell
+•	Bash is the default and most popular shell in most Linux distributions, especially within the cybersecurity profession.
+•	It is considered user-friendly and will be the primary shell used throughout this course for learning and practicing Linux commands.
+
+Input and output in the shell
+Communicating with the Shell
+•	Communication with the shell is like a conversation, where you ask a question (input) and the computer provides an answer (output) or indicates it doesn't understand (error).
+•	The shell processes commands, which can take input, give output, or generate error messages.
+Standard Input and Output
+•	Standard input is information received by the operating system (OS) via the command line, typically from your keyboard.
+•	Standard output is the information returned by the OS through the shell as a response to your command, similar to a friend answering your question.
+Standard Error
+•	Standard error contains error messages returned by the OS through the shell when it cannot respond to a command.
+•	This can happen due to misspellings, unknown commands, or insufficient permissions.
+
+Exemplar: Examine input and output in the shell
+Communicating with the Shell
+•	The Bash shell facilitates communication with the operating system, processing commands that take input and return output or error messages.
+•	As a security analyst, understanding how to input commands and interpret the shell's responses (output or errors) is crucial.
+Generating Output with echo and expr
+•	The echo command is used to output a specified string of text to the shell. Quotation marks are optional but can group characters together, preventing misinterpretation.
+•	The expr command performs basic mathematical calculations, requiring all terms and operators to be separated by spaces (e.g., expr 32 - 8).
+Clearing the Shell
+•	The clear command is used to clear the Bash shell window of all previous input and output, providing a clutter-free environment for focused work.
+
+Wrap-up
+Linux Operating System Fundamentals
+•	The section explored the architecture of Linux, providing a foundational understanding of how this operating system is structured.
+Key Linux Distributions
+•	You were introduced to several widely used Linux distributions in the security field, including KALI LINUX™, Ubuntu, Parrot, Red Hat, and CentOS.
+The Role of the Shell
+•	The shell was presented as a crucial component, acting as an interpreter that facilitates communication between the user and the operating system.
+
+
+Module 3: Linux commands in the Bash shell
+Navigate the Linux file system
+Communicating with Linux
+•	You will learn to use the command line to interact with the Linux operating system.
+•	This involves inputting commands into the shell to perform various tasks.
+Core Linux Commands for Security Analysts
+•	The course will cover navigating and managing the file system within Linux.
+•	You will also learn to authenticate and authorize users, including adding and deleting users and controlling their access.
+Continuing Your Linux Learning Journey
+•	The section will provide resources to support your ongoing learning of new Linux commands.
+•	By the end, you will have practical experience with Linux commands, a crucial skill for security analysts.
+
+Linux commands via the Bash shell
+The Shell: Your OS Communication Hub
+•	The shell acts as a crucial component of the operating system, enabling communication between the user and the OS.
+•	Bash is the default and most commonly used shell in many Linux distributions, and the commands learned in this section are largely consistent across different shells.
+Crafting Commands in Bash
+•	Interacting with the OS through the shell is like a conversation: you input commands, and the OS provides a response.
+•	A dollar sign ($) typically indicates the prompt where you can enter new commands.
+Commands and Arguments
+•	Commands are instructions that tell the computer to perform a specific action, such as finding a file or launching a program.
+•	Arguments provide specific, additional information that a command needs to execute properly, and both commands and arguments in Linux are case-sensitive.
+
+Core commands for navigation and reading files
+Linux File System Hierarchy
+•	The Filesystem Hierarchy Standard (FHS) organizes data in Linux, where everything is considered a file within the system's directory.
+•	The root directory, designated by a single slash (/), is the highest-level directory from which all other subdirectories branch out.
+Navigating the File System
+•	pwd (print working directory) displays your current location in the file system.
+•	ls (list) shows the files and directories within your current working directory.
+•	cd (change directory) allows you to move between different directories.
+Reading File Content
+•	cat (concatenate) displays the entire content of a file.
+•	head shows only the beginning of a file, by default the first ten lines, which is useful for large files.
+
+Navigate Linux and read file content
+Filesystem Hierarchy Standard (FHS)
+•	The FHS organizes data in Linux, defining how directories and storage are structured.
+•	Key standard directories include /home for user directories, /bin for executables, /etc for configuration files, /tmp for temporary files, and /mnt for mounted media.
+File Paths
+•	A file's location is described by a file path, with forward slashes (/) separating hierarchy levels.
+•	The root directory (/) is the highest level, with all subdirectories branching from it.
+Key Commands for Navigating the File System
+•	pwd: Prints the current working directory's absolute path.
+•	ls: Displays the contents (files and directories) of the current or specified directory.
+•	cd: Changes the current directory, allowing navigation using absolute or relative file paths.
+Common Commands for Reading File Content
+•	cat: Displays the entire content of a file.
+•	head: Shows the beginning of a file (defaulting to the first 10 lines).
+•	tail: Shows the end of a file (defaulting to the last 10 lines), useful for log files.
+•	less: Displays file content one page at a time, allowing for easy navigation through large files.
+o	Space bar: Move forward one page
+o	b: Move back one page
+o	Down arrow: Move forward one line
+o	Up arrow: Move back one line
+o	q: Quit and return to the previous terminal window
+
+Exemplar: Find files with Linux commands
+Navigating the File System
+•	The pwd command displays the current working directory, which in this lab is /home/analyst.
+•	The ls command lists the files and directories within the current working directory, revealing subdirectories like logs, projects, reports, and temp.
+Changing Directories and Listing Contents
+•	The cd command is used to change directories. You can use either relative paths (e.g., cd reports) or absolute paths (e.g., cd /home/analyst/reports).
+•	After navigating to a new directory, such as /home/analyst/reports, the ls command can be used again to see its contents, which in this case includes a subdirectory named users.
+Locating and Reading File Contents
+•	The cat command displays the entire content of a specified file, such as Q1_added_users.txt, which can be found in the /home/analyst/reports/users directory.
+•	The head command displays the beginning of a file, by default the first 10 lines. This is demonstrated by viewing the server_logs.txt file in the /home/analyst/logs directory.
+
+Manage file content in Bash
+Find what you need with Linux
+The grep Command
+•	The grep command searches a specified file for a particular string of characters and returns all lines containing that string.
+•	For example, grep OS updates.txt would search the updates.txt file for lines containing "OS".
+Piping in Linux
+•	Piping sends the standard output of one command as the standard input to another command for further processing, represented by the vertical bar character (|).
+•	This allows you to combine commands, such as ls | grep users, which would list files and directories and then filter that list to show only those containing the word "users".
+
+Filter content in Linux
+Filtering for Information
+•	Filtering involves selecting data that matches specific conditions, such as file extensions or text strings.
+•	This skill allows security analysts to quickly locate relevant information, like identifying all .txt files affected by a virus.
+Key Linux Commands for Filtering
+•	grep: This command searches a specified file for lines containing a particular string or text. For example, grep OS updates.txt will return all lines with "OS" in the updates.txt file.
+•	Piping (|): The pipe command sends the standard output of one command as the standard input to another. When used with grep, it can help find files or directories with specific words in their names, such as ls /home/analyst/reports | grep users.
+•	find: This command searches for directories and files based on various criteria, including specific strings in their names (-name for case-sensitive, -iname for case-insensitive) or modification time (-mtime for days, -mmin for minutes). For instance, find /home/analyst/projects -name "*log*" will locate all files containing "log" in their names within the projects directory.
+
+Exemplar: Filter with grep
+Searching for Error Messages in Log Files
+•	Navigate to the /home/analyst/logs directory using cd logs.
+•	Use grep error server_logs.txt to filter the server_logs.txt file and display lines containing the string "error."
+Finding Files with Specific Strings
+•	Change to the /home/analyst/reports/users directory using cd /home/analyst/reports/users.
+•	Employ ls | grep Q1 to list only files that have "Q1" in their names, demonstrating the use of piping to combine commands.
+Searching Within File Contents
+•	Display the files in the current directory with ls.
+•	Search for a specific username, like "jhill," within a file using grep jhill Q2_deleted_users.txt.
+Completed.
+
+Create and modify directories and files
+Linux File System as a Tree
+•	The Linux file system is structured like a tree, with subdirectories branching off a root directory.
+•	This structure helps organize files and subdirectories, similar to how folders are used in other operating systems.
+Essential Linux Commands for Directory and File Management
+•	Creating and Removing: mkdir creates new directories, while rmdir removes them, with a built-in warning for non-empty directories. touch creates new files, and rm deletes them.
+•	Moving and Copying: The mv command moves files or directories to a new location, and cp copies them, allowing the original to remain in its place.
+Editing Files with Nano
+•	The nano command provides a user-friendly text editor for modifying files.
+•	To save changes in Nano, use Ctrl+O followed by Enter, and to exit, use Ctrl+X.
+
+Commands:
+•	mkdir: Creates a new directory.
+•	rmdir: Removes or deletes a directory.
+•	touch: Creates a new file.
+•	rm: Removes or deletes a file.
+•	mv: Moves a file or directory to a new location.
+•	cp: Copies a file or directory into a new location.
+•	nano: A text editor used for writing or editing files.
+•	pwd: Displays the current working directory.
+•	ls: Displays the names of files and directories in the current directory.
+•	cat: Displays the entire content of a file.
+•	head: Displays the beginning of a file (default 10 lines).
+•	tail: Displays the end of a file (default 10 lines)
+•	less: Displays the content of a file one page at a time.
+•	cd: Changes the current directory.
+•	grep: Filters content by searching for patterns in text.
+•	find: Searches for directories and files that meet specified criteria.
+
+Manage directories and files
+
+
+This reading provides an overview of essential Linux commands for managing files and directories, along with an introduction to the nano text editor and methods for redirecting standard output to files.
+Managing Directories
+•	The mkdir command creates new directories, accepting either absolute or relative file paths.
+•	The rmdir command removes empty directories; it cannot delete directories containing files or subdirectories.
+Managing Files
+•	The touch command creates new, empty files, while the rm command permanently deletes files.
+•	The mv command moves or renames files and directories, and the cp command copies them to new locations.
+Text Editing and Output Redirection
+•	The nano text editor is a user-friendly command-line tool for creating and modifying file content, with Ctrl + O to save and Ctrl + X to exit.
+•	Standard output redirection operators > and >> can send command output to files, with > overwriting existing content and >> appending to it.
+
+
+Authenticate and authorize users
+File permissions and ownership
+
+
+This video explains file and directory permissions in Linux, which are crucial for security analysts to protect sensitive information.
+Understanding Permissions
+•	Permissions and Authorization: Permissions define the type of access granted to files or directories, directly relating to authorization, which limits resource access in a system.
+•	Types of Permissions: Linux has three types of permissions: read (view content), write (modify content or create new files), and execute (run files or enter directories).
+Permission Owners and Representation
+•	Permission Owners: Permissions are granted to three types of owners: the user (file creator), the group (a collection of users), and others (all other system users).
+•	10-Character String: Linux represents file permissions with a 10-character string, where the first character indicates file type (e.g., 'd' for directory, '-' for regular file), and subsequent characters denote read, write, and execute permissions for the user, group, and others, respectively.
+Checking Permissions
+•	ls -l Command: The ls -l command displays detailed information about files and directories, including their permissions, owner, and group.
+•	ls -a and ls -la Commands: To view hidden files (those starting with a period), use ls -a. Combining these, ls -la displays permissions for all files and directories, including hidden ones.
+
+
+
+
+Change permissions
+Understanding chmod
+•	chmod stands for "change mode" and is used to modify permissions on files and directories.
+•	The video focuses on the "symbolic" mode for changing permissions, which uses symbols to represent changes.
+Symbolic Mode Components
+•	Owner Types: u for user, g for group, and o for other are used to specify who the permission change applies to.
+•	Mathematical Operators: + is used to add permissions, and - is used to remove permissions.
+•	Permission Types: r for read, w for write, and x for execute are used to specify the type of permission being changed.
+Applying chmod
+•	An example demonstrates changing permissions for access.txt by adding write permissions for the group (g+w) and removing read permissions for others (o-r).
+•	The ls -l command can be used before and after chmod to verify the changes in file permissions.
+
+Permission commands
+This reading reviews Linux file permissions, how to view and change them, and how to apply the principle of least privilege.
+Understanding Linux Permissions
+•	Linux permissions are represented by a 10-character string, indicating read (r), write (w), and execute (x) abilities for files and directories.
+•	Permissions are assigned to three types of owners: the user (owner of the file), the group (a larger group the owner belongs to), and others (all other system users).
+Exploring and Changing Permissions
+•	The ls command, especially with options like -l (displays permissions) and -a (displays hidden files), helps investigate existing file and directory permissions.
+•	The chmod command is used to change permissions, allowing you to add (+), remove (-), or assign (=) specific permissions for the user (u), group (g), or others (o).
+Principle of Least Privilege
+•	The principle of least privilege dictates granting only the minimum necessary access to complete a task, reducing security risks.
+•	An example demonstrates using chmod g-rw bonuses.txt to remove read and write permissions for a group on a sensitive file, ensuring only the necessary user has access.
+•	
+ls -a: Displays hidden files. Hidden files start with a period (.) at the beginning.
+ls -l: Displays permissions to files and directories. Also displays other additional information, including owner name, group, file size, and the time of last modification.
+ls -la: Displays permissions to files and directories, including hidden files. This is a combination of the other two options.
+
+Add and delete users
+User Authentication and Management
+•	Authentication: This is the process of verifying a user's identity to ensure only authorized individuals access the system.
+•	Adding and Deleting Users: It is crucial to add new users when they join an organization or group and to delete users when they leave or change groups to maintain system security and access control.
+Understanding Root Users and sudo
+•	Root User (Superuser): This user has elevated privileges to modify the system, create, modify, or delete any file, and run any program. Only root users or accounts with root privileges can add new users.
+•	sudo Command: This command temporarily grants elevated permissions to specific users, offering a more controlled approach than logging in directly as the root user. It stands for "super-user do" and allows users to execute commands with root privileges without switching accounts.
+Adding and Deleting Users with Commands
+•	useradd Command: This command is used to add a new user to the system. It requires sudo privileges to execute.
+•	userdel Command: This command is used to delete a user from the system. Similar to useradd, it also requires sudo privileges.
+
+Responsible use of sudo
+
+
+This reading focuses on the responsible use of the sudo command and introduces two additional Linux commands, usermod and chown, for managing user authentication and authorization.
+Responsible Use of sudo
+•	The sudo command allows users to temporarily gain elevated permissions, which is crucial for security analysts to perform administrative tasks without the risks associated with logging in as the root user.
+•	It is important to limit sudo access to only those users who genuinely require it and to use it judiciously, as elevated permissions can create security vulnerabilities if compromised.
+User Management Commands
+•	The usermod command is used to modify existing user accounts, allowing changes to primary and supplemental groups, home directories, and login names, as well as the ability to lock user accounts.
+•	The userdel command deletes a user from the system, with an optional -r flag to also remove the user's home directory and files, though deactivating an account with usermod -L is often a safer alternative.
+File Ownership Management
+•	The chown command enables changes to the ownership of files and directories, allowing you to specify both the user and group owner of a particular file or directory. 
+•	When changing group ownership with chown, a colon (:) must precede the group name to differentiate it from a username.
+
+
+Get help in Linux
+The Linux community
+
+
+This video highlights the extensive online resources available for Linux users, emphasizing the benefits of its large and active community.
+The Power of the Linux Community
+•	Linux's popularity and open-source nature have fostered a global community that actively shares information and contributes to its development.
+•	This community serves as a valuable resource for users, providing answers and solutions for various Linux-related tasks.
+Finding Solutions Online
+•	A simple internet search can yield numerous answers to common Linux questions and troubleshooting needs.
+•	Reputable sources like Unix & Linux Stack Exchange offer high-quality, ranked answers, particularly useful for advanced users and troubleshooting.
+Continuous Learning and Support
+•	Actively searching for resources on how to execute tasks is an effective way for beginners to continue learning and developing their Linux skills.
+•	There is abundant support readily available online for any doubts or challenges encountered while working with Linux.
+
+Man pages within the shell
+Accessing Manual Pages
+•	The man command displays comprehensive information about other commands, similar to a manual. For example, man usermod shows details about the usermod command and its options like -d for changing a user's home directory.
+Quick Command References
+•	The whatis command provides a concise, single-line description of a command. For instance, whatis tail reveals that tail outputs the last part of files.
+Searching for Commands
+•	The apropos command searches manual page descriptions for a specified string, helping you find commands related to a particular task. You can refine your search by adding the -a option and an additional string to display only commands containing both keywords, such as apropos -a change password.
+
+Linux resources
+The Linux Community
+•	Linux has a large online community, which is a valuable resource for users of all levels.
+•	The UNIX and Linux Stack Exchange is a trusted question-and-answer website where community members can ask and answer questions about Linux, with higher quality answers voted to the top.
+Integrated Linux Support Commands
+•	The man command (short for "manual") displays detailed information about other commands and their usage, including available options.
+•	The apropos command searches man page descriptions for specified keywords, allowing users to find relevant man pages more easily.
+•	The whatis command provides a single-line description of a command, useful for quick reminders or initial understanding of a new command.
+https://unix.stackexchange.com/ 
+
+Reference guide: Linux
+https://docs.google.com/document/d/1_zRLn6VQej6G8AHcbO5PpYabrbmXBpdmnvQ61enHVMs/edit?tab=t.0#heading=h.4yidexs4qhx
+
+
+
+
+Module 4: Databases and SQL 
+Introduction to SQL and Databases
+The Importance of Diversity in Security Tools
+•	Diverse perspectives and tools are essential for effective security solutions.
+•	Following the Linux command line, SQL is presented as another vital tool for security analysts.
+Understanding SQL and Relational Databases
+•	The section will cover relational databases and their structure.
+•	Learners will explore SQL queries to access data, SQL filters to refine information, and SQL joins to combine tables.
+Practical Application and Benefits of SQL
+•	SQL enables quick review and confident analysis of large datasets due to consistent and easily executable queries.
+•	The course provides hands-on experience with SQL, focusing on the parts most relevant to a security analyst's role.
+
+Introduction to databases
+Databases vs. Spreadsheets
+•	Databases are designed to handle massive amounts of data and can be accessed by multiple users simultaneously, performing complex tasks.
+•	Spreadsheets, like Google Sheets, are typically for smaller datasets and single-user or small-team use.
+Relational Databases
+•	Relational databases are structured databases where information is organized into tables that are related to each other.
+•	These tables contain fields (columns) and rows (records), with rows holding specific data corresponding to the columns.
+Keys in Relational Databases
+•	Primary Key: A column with unique, non-duplicate, and non-empty entries that uniquely identifies each row in a table.
+•	Foreign Key: A column in one table that serves as a primary key in another table, allowing for the connection and relationship between two tables.
+
+Query databases with SQL
+Understanding SQL
+•	SQL, or Structured Query Language, is a programming language used to create, interact with, and request information from databases.
+•	A query is a request for data from one or more database tables, and nearly all relational databases utilize some version of SQL.
+SQL for Security Analysis
+•	SQL is essential for security analysts to retrieve and process logs, which are records of events within an organization's systems.
+•	It allows analysts to efficiently search through large volumes of log data to identify issues like improperly configured machines or unusual activity patterns that may indicate malicious behavior.
+SQL for Data Analytics and Decision Making
+•	SQL is also a common language for basic data analytics, enabling security analysts to filter data to support security-related decisions.
+•	Analysts can use SQL to identify machines that lack the latest security patches or determine optimal times for system updates based on usage patterns.
+
+SQL filtering versus Linux filtering
+Accessing SQL
+•	SQL can be accessed through various interfaces, including the Linux command line.
+•	To access SQL from Linux, you type a command specific to the SQL version you want to use (e.g., sqlite3 for SQLite).
+Differences in Filtering
+•	Purpose: Linux filters data within files and directories for tasks like searching files or managing processes, while SQL filters data within a database management system for querying and manipulating data in tables.
+•	Syntax: Linux uses various commands (e.g., find, grep), while SQL uses a standardized language with keywords like WHERE, SELECT, and JOIN.
+•	Structure: SQL provides more organized and readable results with data separated into columns, making analysis more efficient compared to Linux, which presents data as lines of text.
+•	Joining Tables: SQL allows joining multiple tables to combine information, a functionality that Linux lacks, making SQL more suitable for security analysts needing to connect different data sources.
+Best Uses
+•	While SQL offers better organization and table joining, Linux is still essential for filtering data in formats incompatible with SQL, such as plain text files.
+•	Security analysts need to understand when to use each tool, as much cybersecurity data is in a database format compatible with SQL, but other logs may require Linux filtering.
+
+Basic queries
+Basic SQL Query Structure
+•	SQL queries use SELECT to specify the columns you want to retrieve and FROM to indicate the table you are querying.
+•	For example, to find an employee's ID and their assigned device ID from an employees table, you would use SELECT employee_id, device_id FROM employees;.
+SQL Syntax and Conventions
+•	SQL keywords like SELECT and FROM are not case-sensitive, but using uppercase letters can improve readability.
+•	A semicolon (;) is typically placed at the end of an SQL statement to indicate its completion.
+Retrieving All Columns
+•	To retrieve all columns from a table, you can use an asterisk (*) after SELECT, which is commonly referred to as "select all."
+•	For instance, SELECT * FROM employees; would return all information from the employees table.
+
+Query a database
+Basic SQL Query Structure
+•	The SELECT and FROM keywords are fundamental to any SQL query, with SELECT specifying the columns to retrieve and FROM indicating the table.
+•	You can select specific columns by listing them, or use an asterisk (*) to select all columns from a table.
+The Chinook Database
+•	The course uses the Chinook database, which simulates data from a digital media company, for examples and quizzes.
+•	This database contains various tables, such as employees, customers, and invoices, which include data like names and addresses.
+Organizing Output with ORDER BY
+•	The ORDER BY keyword allows you to sort the results of your query based on one or more specified columns.
+•	By default, ORDER BY sorts in ascending order, but you can use the DESC keyword to sort in descending order.
+
+Basic filters on SQL queries
+The Purpose of Filtering
+•	Filtering in SQL enables you to retrieve only the data that meets specified criteria, similar to choosing only fresh apples from a fruit cart.
+•	As a security analyst, you might use filtering to pinpoint login attempts from a particular country within a log-in attempts table.
+Using the WHERE Clause and Operators
+•	To filter a query in SQL, you add a WHERE clause to your SELECT and FROM statements.
+•	Operators, such as the equal sign (=), are used within the WHERE clause to define the conditions for your filter (e.g., country = 'USA').
+Pattern Matching with LIKE
+•	For more complex filtering, you can search for patterns rather than exact values using the LIKE operator.
+•	The percentage sign (%) acts as a wildcard in pattern matching, allowing you to find records that start with, end with, or contain specific characters (e.g., LIKE 'East%' to find all offices in the East building).
+
+The WHERE clause and basic operators
+The Importance of Filtering in Cybersecurity
+•	As a security analyst, filtering is crucial for sifting through large and complex security logs to pinpoint specific information.
+•	Examples include finding login attempts by a particular user, identifying all login attempts during a security incident, or locating devices running a specific application version.
+Using the WHERE Clause for Filtering
+•	The WHERE keyword is used to specify conditions for filtering data in SQL queries.
+•	For instance, WHERE title = 'IT Staff' will return only records where the 'title' column exactly matches 'IT Staff'.
+Filtering with Patterns: LIKE Operator and Wildcards
+•	To filter based on patterns, you combine the LIKE operator with wildcards.
+•	The percentage sign (%) wildcard substitutes for any number of characters, while the underscore (_) wildcard substitutes for a single character.
+
+
+Filter dates and numbers
+
+
+This video explains how to use SQL queries and filters with different data types, specifically numeric and date and time data.
+Common Data Types in Databases
+•	String Data: This type consists of an ordered sequence of characters (numbers, letters, or symbols) and is used for things like usernames.
+•	Numeric Data: This type consists of numbers, such as login attempt counts, and allows for mathematical operations.
+•	Date and Time Data: This type represents dates and/or times, useful for filtering patch dates or login attempts within a specific period.
+Filtering with Operators
+•	Common Operators: Operators like equals, greater than, less than, not equal to, greater than or equal to, and less than or equal to are used for numeric and date/time data.
+•	Example: Filtering Login Attempts: To find login attempts after 6 pm, you would use the > (greater than) operator in your SQL query, specifying '18:00' for 6 pm.
+Using the BETWEEN Operator
+•	Range Filtering: The BETWEEN operator allows you to filter for numbers or dates within a specified range.
+•	Example: Filtering Patch Dates: To find patches installed between March 1st, 2021, and September 1st, 2021, you would use BETWEEN with the OS_patch_date column, followed by the start and end dates.
+Operators for filtering dates and numbers
+Working with Numeric and Date/Time Data
+•	Security analysts frequently work with numeric data (e.g., login attempts, data volume) and date/time data (e.g., timestamps, login dates).
+•	These data types are crucial for analyzing security logs and other related information.
+Comparison Operators in SQL
+•	SQL uses operators like <, >, =, <=, >=, and <> (or !=) to filter numeric and date/time data.
+•	These operators are incorporated into the WHERE clause of a query to specify conditions for data retrieval.
+Inclusive and Exclusive Operators
+•	Exclusive operators (e.g., >) do not include the comparison value in the results, while inclusive operators (e.g., >=) do.
+•	The BETWEEN operator is an inclusive operator used to filter data within a specified range for both numbers and dates.
+
+Filters with AND, OR, and NOT
+Combining Conditions with AND
+•	The AND operator requires all specified conditions to be true for a row to be included in the results.
+•	For example, to find machines running "Operating System 1" and "Email Client 1", both conditions must be met simultaneously.
+Combining Conditions with OR
+•	The OR operator includes rows if at least one of the specified conditions is true.
+•	This is useful when you need to identify items that satisfy any of several criteria, such as machines running "OS 1" or "OS 3".
+Negating Conditions with NOT
+•	The NOT operator reverses a condition, returning all rows that do not match the specified criteria.
+•	For instance, you can use NOT to select all devices except those using "OS 3", which helps in identifying machines that need updates.
+ 
+More on filters with AND, OR, and NOT
+Understanding Logical Operators
+•	AND Operator: This operator filters data based on two conditions, both of which must be true simultaneously. For example, it can find customers who are both in the USA and handled by a specific support representative.
+•	OR Operator: The OR operator connects two conditions, returning results if either the first condition, the second condition, or both are met. This is useful for finding customers who meet at least one of several criteria, such as being from the USA or Canada.
+Advanced Filtering with NOT and Combinations
+•	NOT Operator: Unlike AND and OR, NOT works on a single condition, negating it to return all records that do not match the specified condition. For instance, it can efficiently find all customers who are not in the USA.
+•	Combining Operators: Logical operators can be combined to create highly specific filters. An example is using NOT with AND to exclude customers from multiple countries, such as finding all customers not in Canada AND not in the USA.
+
+Join tables in SQL
+
+
+This video explains how to join tables in SQL to combine information from multiple sources, focusing on the INNER JOIN for matching data.
+Understanding SQL Joins
+•	Joining tables is crucial when you need to retrieve information that is spread across two or more different tables within a database.
+•	For example, you might join a table of security vulnerabilities with a table of company machines to identify vulnerable systems.
+Join Syntax and Column Identification
+•	When working with multiple tables, you must specify which table a column belongs to by using the format table_name.column_name (e.g., employees.employee_id).
+•	This is especially important when the same column name exists in different tables, such as employee_id in both employees and machines tables.
+The INNER JOIN
+•	An INNER JOIN combines rows from two tables only when there is a match in a specified common column.
+•	The common column is typically a primary key in one table and a foreign key in the other, like employee_id connecting the employees and machines tables.
+
+Types of joins
+Outer Joins Overview
+•	Unlike inner joins, outer joins do not require a match between columns to return a row, allowing for more comprehensive data retrieval.
+•	There are three main types: LEFT JOIN, RIGHT JOIN, and FULL OUTER JOIN, each returning different sets of records based on their matching criteria.
+Types of Outer Joins
+•	LEFT JOIN: This join returns all records from the left table and only the matching rows from the right table. If there's no match in the right table, NULL values are returned for the right table's columns.
+•	RIGHT JOIN: This join returns all records from the right table and only the matching rows from the left table. If there's no match in the left table, NULL values are returned for the left table's columns.
+FULL OUTER JOIN
+•	A FULL OUTER JOIN returns all records from both tables, regardless of whether there's a match. If a row doesn't have a corresponding value in the other table, NULL is returned for the columns from that table.
+
+
+
+
+Coach dialogue: Explore SQL applications in security
+Welcome! In this Dialogue, we'll explore SQL's role in security and relational database organization.
+Here's what we'll cover:
+•	Identify Security Data Storage: We'll discuss where security-related data is typically stored.
+•	Connect SQL to Security Tasks: We'll explore why SQL is a valuable skill for security professionals.
+•	Apply SQL to Security Scenarios: We'll look at how SQL can be used in specific security situations.
+•	Explore Broader SQL Uses: We'll consider other ways SQL is used in cybersecurity.
+COMPLETED with feedback:
+During today's session covering SQL's role in security and relational database organization, we focused on identifying security data storage, connecting SQL to security tasks, applying SQL to security scenarios, and exploring broader SQL uses.
+Your strengths:
+•	You demonstrated a strong understanding of how SQL can be used for investigative tasks during security incidents, such as tracking intrusions and unauthorized deletions.
+•	You provided insightful examples of how SQL queries can be structured to extract specific information for security analysis, like identifying unpatched systems or analyzing database activity during a breach.
+Areas for improvement:
+•	To reach an advanced level, consider exploring more deeply how SQL can be integrated with other security tools and platforms for automated reporting and real-time threat intelligence analysis.
+Keep up the good work!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+`
+
+
+
+
+
+
+
