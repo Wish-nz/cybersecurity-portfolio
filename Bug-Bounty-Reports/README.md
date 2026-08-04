@@ -1,8 +1,8 @@
 # Bug Bounty Reports
 
-This directory contains vulnerability reports and findings from my bug bounty hunting activities.
+This directory contains vulnerability reports and findings from bug bounty and security testing activities.
 
-## 📝 What's Inside
+## What's Inside
 
 - Vulnerability disclosures
 - CVSS scoring and risk assessments
@@ -10,7 +10,7 @@ This directory contains vulnerability reports and findings from my bug bounty hu
 - Remediation recommendations
 - Timeline and resolution tracking
 
-## 🎯 Focus Areas
+## Focus Areas
 
 - Web application vulnerabilities
 - API security issues
@@ -18,16 +18,14 @@ This directory contains vulnerability reports and findings from my bug bounty hu
 - Authentication/Authorization flaws
 - Data exposure issues
 
-## 📋 Reports
+## Reports
 
-*Bug bounty reports will be added here*
-
----
-
-Each report includes:
+Each report should include:
 - Vulnerability description
 - Severity assessment (CVSS)
 - Steps to reproduce
 - Impact analysis
 - Recommended fixes
 - Disclosure timeline
+
+---

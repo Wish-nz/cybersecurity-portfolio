@@ -1,8 +1,8 @@
 # Lab Documentation
 
-This directory contains documentation and configuration notes from my home lab setup and security testing environments.
+This directory contains documentation and configuration notes from home lab setup and security testing environments.
 
-## 📝 What's Inside
+## What's Inside
 
 - Network architecture diagrams
 - Firewall configurations
@@ -11,7 +11,7 @@ This directory contains documentation and configuration notes from my home lab s
 - Security tool deployments
 - Lab environment guides
 
-## 🏗️ Lab Environment
+## Lab Environment
 
 Documentation includes:
 - Hardware/software specifications
@@ -19,15 +19,6 @@ Documentation includes:
 - Tool installations and configurations
 - Best practices and lessons learned
 
-## 📋 Available Documentation
-
-*Lab documentation will be added here*
-
 ---
 
-Each documentation entry includes:
-- Purpose and objectives
-- Step-by-step setup guides
-- Configuration files
-- Troubleshooting notes
-- Performance metrics
+*Lab documentation will be added here.*

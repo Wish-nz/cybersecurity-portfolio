@@ -1,40 +1,31 @@
 # Cybersecurity Portfolio
 
-Welcome to my cybersecurity portfolio! This repository showcases my projects, write-ups, scripts, and learning journey as I develop my skills in cybersecurity and incident response.
+A personal portfolio of cybersecurity work: CTF write-ups, labs, malware analysis, playbooks, audits, and small security scripts.
 
-## 📁 Repository Structure
+Quick navigation
+- Basic-Playbooks/ — incident response playbooks and templates
+- Bug-Bounty-Reports/ — vulnerability reports and PoCs
+- CTF-Write-ups/ — challenge solutions and methodology
+- Lab-Documentation/ — home lab and testing environment notes
+- Malware-Analysis/ — analysis reports, IOCs, YARA rules
+- Security Audits/ — audit reports and checklists
+- Security-Scripts/ — small, non-destructive tooling
+- incident-handler-journal/ — incident logs and templates
+- Google Cybersecurity Professional Certificate Notes/ — coursework notes
 
-- **[CTF-Write-ups/](./CTF-Write-ups/)** - Detailed write-ups from Capture The Flag challenges and competitions
-- **[Security-Scripts/](./Security-Scripts/)** - Security tools and scripts I've built
-- **[Malware-Analysis/](./Malware-Analysis/)** - My malware analysis reports and findings
-- **[Lab-Documentation/](./Lab-Documentation/)** - Documentation of my home lab setups
-- **[Bug-Bounty-Reports/](./Bug-Bounty-Reports/)** - Vulnerability findings and bug bounty reports
-- **[Basic-Playbooks/](./Basic-Playbooks/)** - Incident response playbooks and security response guidance
+Usage & scripts
+- Security-Scripts/simple_audit.sh
+  - Make executable: `chmod +x Security-Scripts/simple_audit.sh`
+  - Run (recommended as root for more details): `sudo ./Security-Scripts/simple_audit.sh`
+  - Warning: non-destructive but may reveal sensitive system information — review before sharing.
 
-## 🎯 About Me
+Contributing
+- If you contribute, please avoid adding sensitive data (passwords, keys, real customer PII).
+- For incident/journal entries, redact or summarize confidential fields.
 
-I'm Daniel Thrasyvoulou, passionate about cybersecurity and dedicated to building practical skills in incident response, threat detection, and blue team operations. I'm actively learning through hands-on labs, CTF competitions, and security research projects.
-
-## 🚀 What You'll Find Here
-
-This portfolio represents my journey learning cybersecurity through real-world scenarios, CTF challenges, and security research. Each project documents my approach, findings, and key takeaways.
-
-## 📚 Skills & Interests
-
-- Incident Response & Threat Hunting
-- Malware Analysis
-- Network Security
-- Security Scripting (Python, Bash)
-- Vulnerability Assessment
-- Blue Team Operations
-
-## 📧 Get In Touch
-
-Feel free to reach out to discuss cybersecurity, security tools, or collaboration opportunities!
-
-**Email:** dannythrasyvoulou@gmail.com  
-**GitHub:** [Wish-nz](https://github.com/Wish-nz)
+Contact
+- Email: dannythrasyvoulou@gmail.com
+- GitHub: https://github.com/Wish-nz
 
 ---
-
-*Last updated: 2026-07-06*
+*Last updated: 2026-08-04*
