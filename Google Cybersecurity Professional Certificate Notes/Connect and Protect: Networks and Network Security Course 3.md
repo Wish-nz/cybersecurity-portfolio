@@ -1,4 +1,4 @@
-# Connect and Protect: Networks and Network Security Course 3
+# Connect and Protect - Networks and Network Security Course 3
 
 ## Quick Navigation
 - [Connect and Protect: Module 1](#connect-and-protect-module-1)
