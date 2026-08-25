@@ -1,5 +1,3 @@
-Use this write-up as the challenge solution.
-
 ## NZCSC API SSRF
 
 I started by opening the challenge site and reading the OpenAPI description. It showed three endpoints: `/login`, `/challenge`, and `/fetch`, and the description said the service fetches remote resources on behalf of authenticated users. The login example also exposed the test credentials, but the schema example used `nzcscdev` as the username while the prose said `nzcsdev`, which turned out to matter.
