@@ -1,3 +1,6 @@
+# NOT FINISHED
+
+
 What to check first
 Open the .eml in a text editor, not a mail client.
 
