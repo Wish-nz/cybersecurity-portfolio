@@ -10,7 +10,7 @@ The goal is to recover the substitution key and decode the final flag:
 ⋏⋉☊⌇☊{⋏0⏁-0⎎_⏁⊑⟟⌇-⍙0⍀⌰⎅}
 ```
 
-The challenge page identifies the workbench as a live decoder: assigning letters to symbols updates the decoded log. [chall02.r0.nzcsc.org](https://chall02.r0.nzcsc.org.nz/)
+The challenge page identifies the workbench as a live decoder: assigning letters to symbols updates the decoded log. 
 
 ## Step 1: Identify the cipher
 
@@ -31,7 +31,7 @@ That indicates a **monoalphabetic substitution cipher**:
 - Each symbol represents one Latin letter.
 - The same symbol always represents the same letter.
 - Spaces and punctuation remain unchanged.
-- The two letters already confirmed by the page are `⏃ = A` and `⍜ = O`. [chall02.r0.nzcsc.org](https://chall02.r0.nzcsc.org.nz/)
+- The two letters already confirmed by the page are `⏃ = A` and `⍜ = O`. 
 
 ## Step 2: Use known words
 
@@ -96,7 +96,7 @@ THE LIGHTS WERE NEVER OURS BY THE WAY. WE JUST GOT LUCKY WITH THE TIMING.
 LUCKY OR NOT IT WORKED. LET THE OFFICIALS ARGUE ABOUT BALLOONS AND ROCKETS.
 ```
 
-The conversation provides contextual confirmation that the recovered plaintext is correct: the speakers discuss the lights, the network, timing, and misleading explanations involving balloons and rockets. [chall02.r0.nzcsc.org](https://chall02.r0.nzcsc.org.nz/)
+The conversation provides contextual confirmation that the recovered plaintext is correct: the speakers discuss the lights, the network, timing, and misleading explanations involving balloons and rockets. 
 
 ## Step 4: Follow the hint
 
