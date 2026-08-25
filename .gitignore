@@ -1,0 +1,107 @@
+# System Files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# IDE Files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+.vim/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environments
+venv/
+env/
+ENV/
+.venv
+
+# Sensitive Information
+*.key
+*.pem
+*.pfx
+*.p12
+*.crt
+*.cer
+*.jks
+.env
+.env.local
+credentials.txt
+secrets.txt
+config.local.json
+
+# Malware & Sensitive Files
+*.exe
+*.dll
+*.so
+*.dylib
+malware_samples/
+sensitive_data/
+
+# Logs & Temp Files
+*.log
+*.tmp
+*.cache
+temp/
+tmp/
+
+# OS Specific
+.AppleDouble
+.LSOverride
+Desktop.ini
+
+# Compiled Files
+*.o
+*.a
+*.la
+*.lo
+*.so.*
+*.class
+*.jar
+
+# Build Artifacts
+node_modules/
+.cache/
+dist/
+build/
+
+# Testing
+.coverage
+htmlcov/
+.pytest_cache/
+.tox/
+
+---
+
+# Portfolio-specific
+# Remove stray notes and temporary files
+*.bak
+*.backup
+
+# Exclude actual malware samples (keep documentation only)
+malware_samples/
+pcap_samples/
