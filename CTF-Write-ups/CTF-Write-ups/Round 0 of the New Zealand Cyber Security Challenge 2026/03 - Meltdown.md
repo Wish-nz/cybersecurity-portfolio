@@ -138,7 +138,7 @@ NZCSC{B4S3LIN3_D3V1AT10N}
 
 ## Incident Interpretation
 
-The reactor did experience a genuine shutdown sequence: pump speed gradually decreased until it reached `0 RPM`, after which the log reported a core overheat and went offline. [chall03.r0.nzcsc.org](https://chall03.r0.nzcsc.org.nz/)
+The reactor did experience a genuine shutdown sequence: pump speed gradually decreased until it reached `0 RPM`, after which the log reported a core overheat and went offline.
 
 However, the strongest evidence of foul play is in the temperature stream. The 25 outliers are:
 
