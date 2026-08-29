@@ -3,39 +3,36 @@
 ## Challenge Overview
 
 * **Files Involved:** `Bangarang.wav` (original) and `Flagarang.wav` (modified remix)
-* **Objective:** Isolate the differences between the two audio tracks to extract the hidden data or visual payload.
+* **Objective:** Isolate the audio differences between the two files to extract the hidden steganographic payload.
 * **Final Flag:** `NZCSC{4UDI0_ST3G0_M4ESTR0}`
 * **webpage:** https://r0.nzcsc.org.nz/challenges#20%20-%20Flagarang-20
 
 ---
 
-## Step-by-Step Solution Methodology
+## Step-by-Step Solution
 
-### 1. Initial Reconnaissance & Spectrogram Analysis
+### Step 1: Discovering the Visual Hint (Inverting and Combining Tracks)
 
-The challenge prompt hinted that the creator only changed the word "Bangarang" to "Flagarang" and mocked uncompressed audio formats. Opening both WAV files in **Audacity** and looking at the spectrogram revealed critical visual clues:
+To find out what changed between the tracks, both audio files were loaded into an audio workstation (Audacity). By **flipping (phase-inverting) `Flagarang.wav` and combining/mixing it with `Bangarang.wav**`, the shared music elements cancelled each other out, leaving behind only the hidden differences.
 
-* **The Dimensions Hint:** Around the 2.0 to 3.0-second mark, the text **`1200 x 200`** was painted directly into the frequency spectrum, acting as a canvas dimension guide.
-* **The Payload Block:** Further down the timeline, a distinct, dense block of frequency energy was spotted sitting between **6.25 seconds and 11.75 seconds**.
-
----
-
-### 2. Formulating the Mathematical Approach
-
-A canvas size of $1200 \times 200$ requires exactly **240,000 pixels**.
-
-* At a standard audio sample rate of **44,100 Hz**, 240,000 samples translates to roughly **5.44 seconds** of audio data.
-* This matched the precise duration of the payload block observed on the Audacity timeline between 6.25s and 11.75s.
-
-Instead of parsing the entire 3-minute song (which introduced millions of bytes of irrelevant background music noise), the strategy required jumping directly to the start index of **6.25 seconds** and capturing exactly 240,000 sequential sample differences.
+Looking at the resulting track's spectrogram revealed a visual signpost: the text **`1200 x 200`** painted directly into the frequencies early in the timeline, indicating the target image dimensions and confirming the steganography method. Further down the timeline, a distinct block of data noise was visible between **6.25 seconds and 11.75 seconds**.
 
 ---
 
-### 3. Writing the Python Extraction Script
+### Step 2: Calculating the Sample Window
 
-To extract the hidden image, a Python script was built using `wave` to read the PCM frames, `struct` to unpack the 16-bit audio integers, and `PIL` (Pillow) to render the pixel grid.
+A canvas resolution of $1200 \times 200$ requires exactly **240,000 pixels**.
 
-Because audio workstations introduce microscopic floating-point rounding variations and background noise everywhere, a **noise threshold filter** (`threshold=500`) was added to ignore minor fluctuations and isolate only the intentional modifications.
+* At a standard audio sample rate of **44,100 Hz**, 240,000 samples maps to a duration of roughly **5.44 seconds**.
+* This duration matched the boundaries of the data payload block observed on the Audacity timeline between **6.25s and 11.75s**.
+
+---
+
+### Step 3: Writing the Python Extraction Script
+
+Rather than parsing the entire audio file, a Python script was written to jump directly to the **6.25-second** mark, extract exactly 240,000 sequential samples, and map them onto a 1200x200 pixel grid.
+
+To filter out microscopic background static and audio workstation rounding noise, a **noise threshold filter** (`threshold=500`) was applied so only significant amplitude differences registered as white pixels.
 
 ```python
 import wave
@@ -98,8 +95,8 @@ render_threshold_window("Flagarang.wav", "Bangarang.wav", start_sec=6.25, width=
 
 ---
 
-### 4. Result & Conclusion
+### Step 4: Conclusion & Flag Retrieval
 
-Running the script successfully generated `Flag_Threshold_1200x200.png`. Filtering out the baseline audio static cleanly resolved the pixelated text hidden in the frequency domain, revealing the plaintext flag:
+Executing the script successfully generated `Flag_Threshold_1200x200.png`, cleanly rendering the hidden image and revealing the flag text:
 
 > **`NZCSC{4UDI0_ST3G0_M4ESTR0}`**
