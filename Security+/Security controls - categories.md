@@ -1,4 +1,4 @@
-Security Control Categories
+# Security Control Categories
 
 Technical controls involve electronic computing systems like intrusion detection systems, antivirus, and firewalls that provide security.
 Operational controls relate to how an organization operates structurally, including roles such as chief information security officer and data custodian.
